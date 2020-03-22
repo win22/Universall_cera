@@ -30,6 +30,53 @@ class SolController extends Controller
             ->with(['parent_id' => $parent_id]);
     }
 
+    public function search()
+    {
+        request()->validate([
+           'search' => ['required', 'max:60']
+        ]);
+        $search = request('search');
+        $all_sol = Produit::where('model', 'like', '%' .$search. '%')
+            ->latest()
+            ->paginate(5);
+        $nb_count = $all_sol->count();
+
+        $categorie_id = Categorie::where('name', 'sol')
+            ->first();
+        $parent_id = Categorie::where('parent_id', 3)
+            ->latest()
+            ->get();
+
+        return view('backend.sol.all', ['all_sol' => $all_sol])
+            ->with(['nb_count' => $nb_count])
+            ->with(['categorie_id' => $categorie_id])
+            ->with(['parent_id' => $parent_id]);
+    }
+
+    public function actives($id)
+    {
+       $produit = Produit::findOrFail($id);
+       $produit->status = 1;
+       $produit->user_id = Auth::id();
+       $produit->save();
+       return back()->with(
+         Session::put('message',"Vous avez activé le produit " .$produit->model)
+       );
+
+    }
+
+    public function desactives($id)
+    {
+        $produit = Produit::findOrFail($id);
+        $produit->status = 0;
+        $produit->user_id = Auth::id();
+        $produit->save();
+        return back()->with(
+            Session::put('message',"Vous avez désactivé le produit " .$produit->model)
+        );
+
+    }
+
     public function save(Request $request)
     {
         request()->validate([

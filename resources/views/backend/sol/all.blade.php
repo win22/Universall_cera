@@ -10,10 +10,10 @@
                 <p>Catégorie: Sol</p>
             </div>
             <div style="padding-top: 20px" class="float-right">
-                <form class="form-inline ml-3" action="/" method="post">
+                <form class="form-inline ml-3" action="{{ route('sear_sol') }}" method="post">
                     @csrf
                     <div class="input-group input-group-sm">
-                        <input style="border-color: tomato" required class="form-control form-control-navbar" type="search" name="search" placeholder="Rechercher" aria-label="Search">
+                        <input style="border-color: tomato" required class="form-control form-control-navbar" type="search" name="search" placeholder="Rechercher par modèle" aria-label="Search">
                         <div class="input-group-append">
                             <button style="background-color: tomato; color: white" class="btn btn-navbar" type="submit">
                                 <i class="fas fa-search"></i>
@@ -65,11 +65,11 @@
                         <td class="td-actions text-center">
                             @if(Auth::check() AND Auth::user()->role == 1)
                             @if($v_info->status == 1)
-                            <a href="/desactive_admin/{{$v_info['id']}}" class="btn btn-dark btn-link btn-sm">
+                            <a href="/desactive_sol/{{$v_info['id']}}" class="btn btn-dark btn-link btn-sm">
                                 <i style="color: white !important;" class="fas fa-thumbs-down"></i>
                             </a>
                             @else
-                            <a href="/active_admin/{{$v_info['id']}}" class="btn btn-info btn-link btn-sm">
+                            <a href="/active_sol/{{$v_info['id']}}" class="btn btn-info btn-link btn-sm">
                                 <i style="color: white !important;" class="fas fa-thumbs-up"></i>
                             </a>
                             @endif

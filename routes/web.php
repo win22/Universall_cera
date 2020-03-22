@@ -39,6 +39,9 @@ Route::group([
 
 
     //-------------Partie Sol-------------
-    Route::get('all_sol', 'SolController@index')->name('sol');
-    Route::post('save_sol', 'SolController@save')->name('sol_save');
+    Route::get('/all_sol', 'SolController@index')->name('sol');
+    Route::get('/active_sol/{id}', 'SolController@actives')->name('sol_active');
+    Route::get('/desactive_sol/{id}', 'SolController@desactives')->name('sol_desactive');
+    Route::post('/save_sol', 'SolController@save')->name('sol_save');
+    Route::post('/search_sol', 'SolController@search')->name('sear_sol');
 });
