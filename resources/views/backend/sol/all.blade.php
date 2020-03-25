@@ -41,11 +41,15 @@
                     </thead>
                     <tbody>
                     @foreach($all_sol as $v_info)
+                    <a>
+
+                    </a>
                     <tr>
                         <td><img src="{{ URL::to($v_info['image']) }}"
                                  style=" height: 40px; width: 40px; border-radius: 15px;">
                         </td>
-                        <td>{{ $v_info['model'] }}</td>
+                        <td>
+                            <a href="{{ route('detail_sol',array('test' => $v_info->id)) }}">{{ $v_info['model'] }}</a></td>
                         <td>{{ $v_info['taille'] }}</td>
                         <td>
                             {{ $v_info['prix'] }} FCFA
@@ -75,11 +79,13 @@
                             @endif
                             <a data-toggle="modal"
                                data-id="{{ $v_info['id'] }}"
-                               data-name="{{ $v_info['name'] }}"
-                               data-email="{{ $v_info['email'] }}"
-                               data-password="{{ bcrypt($v_info['password']) }}"
-                               data-role="{{ $v_info['role'] }}"
-                               data-target="#updateModal"
+                               data-model="{{ $v_info['model'] }}"
+                               data-taille="{{ $v_info['taille'] }}"
+                               data-prix="{{$v_info['prix'] }}"
+                               data-categorie_id="{{ $v_info['categorie_id'] }}"
+                               data-parent_id="{{ $v_info['parent_id'] }}"
+                               data-description="{{ $v_info['description'] }}"
+                               data-target="#updateModal3"
                                class="btn btn-warning btn-link btn-sm" style="margin-left: 2px">
                                 <i style="color: white !important;" class="fas fa-edit"></i>
                             </a>
@@ -103,7 +109,7 @@
             </div>
             <div style="padding-top: 30px" class="card-tools">
                 <a href="#" class="btn btn-info  btn-sm" data-toggle="modal" data-target="#exampleModal">
-                    <i style="color: #ffffff !important;" class="fas fa-plus"></i> &nbsp; Ajouter un sol</a>
+                    <i style="color: #ffffff !important;" class="fas fa-plus"></i> &nbsp; Ajouter un nouveau sol</a>
                 <ul class="pagination pagination-sm float-right">
                     {{ $all_sol->links() }}
                 </ul>
@@ -202,9 +208,33 @@
                         <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Annuler</button>
                     </div>
                 </form>
-
-
             </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="updateModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content card-orange card-outline">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modifier un utilisateur</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form enctype="multipart/form-data" action="/update_admin/test" method="post">
+                @csrf
+                <div class="modal-body">
+                    <input hidden name="id" id="id" value="">
+                    @include('backend.sol.edit')
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-outline-orange btn-sm">Modifier</button>
+                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Annuler</button>
+                </div>
+            </form>
 
         </div>
     </div>

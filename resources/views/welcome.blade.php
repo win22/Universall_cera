@@ -56,8 +56,8 @@
                         <div class="header_search">
                             <div class="header_search_content">
                                 <div class="header_search_form_container">
-                                    <form action="#" class="header_search_form clearfix">
-                                        <input type="search" required="required" class="header_search_input" placeholder="Search for products...">
+                                    <form  action="#" class="header_search_form clearfix">
+                                        <input style="border-color: tomato" type="search" required="required" class="header_search_input" placeholder="Search for products...">
                                         <div class="custom_dropdown">
                                             <div class="custom_dropdown_list">
                                                 <span class="custom_dropdown_placeholder clc">Catalogue</span>
@@ -155,7 +155,7 @@
 
                             <div class="page_menu_search">
                                 <form action="#">
-                                    <input type="search" required="required" class="page_menu_search_input" placeholder="Search for products...">
+                                    <input  type="search" required="required" class="page_menu_search_input" placeholder="Search for products...">
                                 </form>
                             </div>
                             <ul class="page_menu_nav">
@@ -234,14 +234,14 @@
 
     <!-- Banner -->
 
-    <div class="banner">
-        <div class="banner_background" style="background-image:url(images/banner_background.jpg)"></div>
+    <div class="banner" style="height: 660px !important;">
+        <div class="banner_background" style="background-image:url({{ asset('site/images/sl3.jpeg') }}) center;  "></div>
         <div class="container fill_height">
             <div class="row fill_height">
-                <div class="banner_product_image"><img src="images/banner_product.png" alt=""></div>
+                <div class="banner_product_image"><img src="{{ asset('site/images/banner_product.png') }}" alt=""></div>
                 <div class="col-lg-5 offset-lg-4 fill_height">
                     <div class="banner_content">
-                        <h1 class="banner_text">new era of smartphones</h1>
+                        <h1 class="banner_text">Bienvenue !</h1>
                         <div class="banner_price"><span>$530</span>$460</div>
                         <div class="banner_product_name">Apple Iphone 6s</div>
                         <div class="button banner_button"><a href="#">Shop Now</a></div>

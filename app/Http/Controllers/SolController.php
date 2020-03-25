@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
 use App\Models\Categorie;
 use App\Models\Produit;
 use Illuminate\Http\Request;
@@ -113,5 +114,22 @@ class SolController extends Controller
             'image' => $image_sol
         ]);
         return back()->with(Session::put('message', 'Un produit de catégorie sol a été ajouté avec succès !'));
+    }
+
+    public function details($id)
+    {
+        $detail_sol = Produit::findOrFail($id);
+        $admin_name = Admin::find($detail_sol->user_id);
+        $name_cat = Categorie::where('id', $detail_sol->parent_id)->first();
+        $categorie_id = Categorie::where('name', 'sol')
+            ->first();
+        $parent_id = Categorie::where('parent_id', 3)
+            ->latest()
+            ->get();
+        return view('backend.sol.details', ['detail_sol' => $detail_sol])
+                    ->with(['admin_name' => $admin_name])
+                    ->with(['name_cat' => $name_cat])
+                    ->with(['categorie_id' => $categorie_id])
+                    ->with(['parent_id' => $parent_id]);
     }
 }

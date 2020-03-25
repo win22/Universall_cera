@@ -168,7 +168,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <footer class="main-footer card-success1 card-outline1">
         <!-- To the right -->
         <div class="float-right d-none d-sm-inline">
-            3s investissement suarl
+            Universal Céramique
         </div>
         <!-- Default to the left -->
         <span class="small">Copyright &copy; 2020 | Design by  <a  href="http://nataalagency.com/">Nataal Agency</a>.</span>
@@ -248,6 +248,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
         modal.find('.modal-body #name_p').val(name_p)
     })
 </script>
+
+<script>
+    $('#updateModal3').on('show.bs.modal', function (event) {
+
+        var button = $(event.relatedTarget)
+        var id = button.data('id')
+        var model = button.data('model')
+        var prix = button.data('prix')
+        var taille = button.data('taille')
+        var categorie_id = button.data('categorie_id')
+        var parent_id = button.data('parent_id')
+        var description = button.data('description')
+
+
+        var modal = $(this)
+        modal.find('.modal-body #id').val(id)
+        modal.find('.modal-body #model').val(model)
+        modal.find('.modal-body #prix').val(prix)
+        modal.find('.modal-body #taille').val(taille)
+        modal.find('.modal-body #categorie_id').val(categorie_id)
+        modal.find('.modal-body #parent_id').val(parent_id)
+        modal.find('.modal-body #description').val(description)
+    })
+</script>
+
 
 <!-- Pour afficher l'animation au niveau de l'alerte -->
 <script>
