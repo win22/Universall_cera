@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Session;
+use File;
 
 class SolController extends Controller
 {
@@ -38,6 +39,7 @@ class SolController extends Controller
         ]);
         $search = request('search');
         $all_sol = Produit::where('model', 'like', '%' .$search. '%')
+            ->where('parent_id', 3)
             ->latest()
             ->paginate(5);
         $nb_count = $all_sol->count();
@@ -131,5 +133,51 @@ class SolController extends Controller
                     ->with(['name_cat' => $name_cat])
                     ->with(['categorie_id' => $categorie_id])
                     ->with(['parent_id' => $parent_id]);
+    }
+
+    public function updates(Request $request)
+    {
+        request()->validate([
+            'model' => ['required', 'max:60'],
+            'taille' => ['required', 'max:60'],
+            'prix' => ['required', 'max:30'],
+            'description' => ['required'],
+            'categorie_id' => ['required'],
+            'parent_id' => ['required'],
+        ]);
+        $id = $request->id;
+        $sol = Produit::findOrFail($id);
+        $sol->model = $request->model;
+        $sol->taille = $request->taille;
+        $sol->prix = $request->prix;
+        $sol->description = $request->description;
+        $sol->categorie_id = $request->categorie_id;
+        $sol->parent_id = $request->parent_id;
+        $image = $request->file('image');
+        if($image)
+        {
+            $image_name = str_random(10);
+            $text = strtolower($image->getClientOriginalExtension());
+            $image_full_name =$image_name.'.'.$text;
+            $upload_path = 'images/';
+            $image_url = $upload_path.$image_full_name;
+            $success = $image->move($upload_path,$image_full_name);
+            if($success){
+                File::delete($sol->image);
+                $sol->image = $image_url;
+            }
+        }
+        $sol->save();
+        return back()->with(Session::put('message', 'Ce produit a été modifié avec succès !'));
+    }
+
+    public function deletes($id)
+    {
+        $sol = Produit::findOrFail($id);
+        File::delete($sol->image);
+        $sol->delete();
+        Session::put('message', 'Un sol a été supprimé. ');
+        return back();
+
     }
 }

@@ -100,7 +100,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form enctype="multipart/form-data" action="/update_admin/test" method="post">
+            <form enctype="multipart/form-data" action="/update_sol/test" method="post">
                 @csrf
                 <div class="modal-body">
                     <input hidden name="id" id="id" value="">

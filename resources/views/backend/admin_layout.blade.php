@@ -97,7 +97,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('sol') }}" class="nav-link {{ request()->is('all_sol')? 'active' : '' }}">
+                        <a href="{{ route('sol') }}" class="nav-link {{ request()->is('all_sol', 'detail_sol')? 'active' : '' }}">
                             <i class=" {{ request()->is('all_sol')? 'nav-icon fas fa-circle' : 'far fa-circle nav-icon' }} "></i>
 
                             <p>
@@ -106,7 +106,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('sol') }}" class="nav-link {{ request()->is('all_faience')? 'active' : '' }}">
+                        <a href="{{ route('faience') }}" class="nav-link {{ request()->is('all_faience')? 'active' : '' }}">
                             <i class=" {{ request()->is('all_faience')? 'nav-icon fas fa-circle' : 'far fa-circle nav-icon' }} "></i>
 
                             <p>
@@ -115,7 +115,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('sol') }}" class="nav-link {{ request()->is('all_anitaire')? 'active' : '' }}">
+                        <a href="{{ route('sanitaire') }}" class="nav-link {{ request()->is('all_sanitaire')? 'active' : '' }}">
                             <i class=" {{ request()->is('all_anitaire')? 'nav-icon fas fa-circle' : 'far fa-circle nav-icon' }} "></i>
 
                             <p>
