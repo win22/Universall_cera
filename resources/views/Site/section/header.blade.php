@@ -3,12 +3,12 @@
     <header id="header" class="header header-style1"  >
 
         <!--        premier ligne-->
-        <div class="header-top">
+        <div style="background-color: #0b85ea" class="header-top">
             <div class="container">
                 <div class="rows">
                     <!-- SIDEBAR TOP MENU -->
                     <div class="pull-left top1">
-
+                        <div style="color: white; font-family: 'Manjari Bold'; font-size: 20px" class="call-us"><span></span>Restez chez vous s'il vous plait</div>
                     </div>
 
                     <div class="pull-right">
@@ -42,7 +42,7 @@
                     <!-- LOGO -->
                     <div class="etrostore-logo pull-left">
                         <a href="/">
-                            <img src="{{ asset('site/images/icons/logo-orange.png') }}" alt="Shoopy">
+                            <img  style="height: 50px" src="{{ asset('site/images/icons/logoucs.jpg') }}" alt="Shoopy">
                         </a>
                     </div>
 
@@ -410,17 +410,17 @@
             </div>
         </div>
     </header>
-    <div class="container">
+    <div  class="container">
         <div class="row">
             <div id="contents" role="main" class="main-page  col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="post-6 page type-page status-publish hentry">
                     <div class="entry-content">
-                        <div class="entry-summary">
-                            <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row vc_row-fluid bg-wrap homepage1_custom vc_row-no-padding">
+                        <div style="margin-bottom: -28px !important;" class="entry-summary">
+                            <div   data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row vc_row-fluid bg-wrap homepage1_custom vc_row-no-padding">
                                 <div class="container float vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner ">
-                                        <div class="wpb_wrapper">
-                                            <div class="vc_row vc_inner vc_row-fluid ">
+                                        <div   class="wpb_wrapper">
+                                            <div  class="vc_row vc_inner vc_row-fluid ">
                                                 <div class="wrap-vertical vc_column_container vc_col-sm-2">
                                                     <div class="vc_column-inner ">
                                                         <div class="wpb_wrapper">
@@ -572,13 +572,13 @@
                                                                             <div id="main-slider" class="fullwidthbanner-container" style="position:relative; width:800px;  !important; margin-top:0px; margin-bottom:0px">
                                                                                 <div class="module slideshow no-margin">
                                                                                     <div class="item">
-                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/sli5.jpg') }} " alt="slider1" class="img-responsive" style="height: 550px"></a>
+                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/sli5.jpg') }} " alt="slider1" class="img-responsive" style="height: 530px"></a>
                                                                                     </div>
                                                                                     <div class="item">
-                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/sl1.jpg') }}" alt="slider2" class="img-responsive" style="height: 550px"></a>
+                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/sl1.jpg') }}" alt="slider2" class="img-responsive" style="height: 530px"></a>
                                                                                     </div>
                                                                                     <div class="item">
-                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/sl2.jpg') }}" alt="slider3" class="img-responsive" style="height: 550px"></a>
+                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/sl2.jpg') }}" alt="slider3" class="img-responsive" style="height: 530px"></a>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="loadeding"></div>

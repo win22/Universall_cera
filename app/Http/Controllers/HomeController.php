@@ -14,13 +14,14 @@ class HomeController extends Controller
             ->where('status', 1)
             ->take(8)
             ->get();
-        $fa_catalogue = Produit::where('categorie_id', 7)
-            ->where('status', 1)
-            ->take(8)
+        $all_product = Produit::where('status', 1)
+            ->take( 12)
+            ->latest()
             ->get();
+
         $sanitaire_catalogue = Produit::where('categorie_id', 12)
             ->where('status', 1)
-            ->take(8)
+            ->take(4)
             ->get();
 
         $produit_catalogue_1 = Produit::where('categorie_id', 12)
@@ -36,7 +37,7 @@ class HomeController extends Controller
             ->get();
 
         return view('welcome',['sol_catalogue' => $sol_catalogue])
-            ->with(['fa_catalogue' => $fa_catalogue])
+            ->with(['all_product' => $all_product])
             ->with(['sanitaire_catalogue' => $sanitaire_catalogue])
             ->with(['produit_catalogue_1' => $produit_catalogue_1])
             ->with(['produit_catalogue_2' => $produit_catalogue_2]);
