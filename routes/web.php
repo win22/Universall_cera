@@ -12,12 +12,25 @@
 */
 
 
+//Config site
+
 Route::get('/','HomeController@index');
+Route::get('/contact', 'HomeController@contacts')->name('contact');
+Route::get('/about', 'HomeController@abouts')->name('about');
+Route::get('/details/{id}', 'ProductController@details')->name('details');
+
+
+Route::post('/searh', 'ProductController@search')->name('search');
+Route::get('/shop', 'ShopController@shop')->name('shop');
+
+
+
+
+
+
 
 Route::get('/ceramique_universall_admin', 'SuperAdminController@index');
 Route::post('/authentification', 'SuperAdminController@connexion')->name('signin_connexion_user_admin');
-
-Route::get('/dashboard', 'DashboardController@index');
 
 Route::group([
     'middleware' => 'App\Http\Middleware\Auth'

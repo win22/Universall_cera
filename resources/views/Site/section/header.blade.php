@@ -8,15 +8,11 @@
                 <div class="rows">
                     <!-- SIDEBAR TOP MENU -->
                     <div class="pull-left top1">
-                        <div style="color: white; font-family: 'Manjari Bold'; font-size: 20px" class="call-us"><span></span>Restez chez vous s'il vous plait</div>
+                        <div style="color: white; font-family: 'Manjari Bold'; font-size: 18px" class="call-us"><span></span>Restez chez vous s'il vous plait</div>
                     </div>
 
                     <div class="pull-right">
-                        <div class="sidebar-account pull-left">
-                            <div class="account-title">
-                                <div class="call-us"><span>Call Us Now: </span>0123-444-666654123</div>
-                            </div>
-                        </div>
+
 
                         <div class="pull-left top2">
                             <div class="widget widget_nav_menu">
@@ -24,7 +20,7 @@
                                     <ul id="menu-checkout" class="menu">
                                         <li class="menu-checkout">
                                             <a class="item-link" href="checkout.html">
-                                                <span class="menu-title">Adresse</span>
+                                                <span class="menu-title"><i class="fa fa-phone"></i> (+221) 33 878 65 60</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -51,162 +47,41 @@
                             <div class="widget-inner">
                                 <div class="top-form top-search" >
                                     <div class="topsearch-entry" >
-                                        <input style="background-color: white; border-color: orange" type="text" value="" name="s" placeholder="Recherche...">
-                                        <div style="background-color: white; border-color: orange" class="cat-wrapper">
-                                            <label style="background-color: white" class="label-search">
-                                                <select style="background-color: white" name="search_category" class="s1_option">
-                                                    <option value="">Choisir Catégorie</option>
-                                                    <option value="8">Sol</option>
-                                                    <option value="8">Faiences</option>
-                                                    <option value="8">Façades</option>
-                                                    <option value="8">Lavabo</option>
-                                                    <option value="8">Sanitaire</option>
+                                        <form action="{{ route('search') }}" method="post">
+                                            @csrf
+                                            <input style="background-color: white; border-color: orange" type="text" value="" name="search" placeholder="Recherche...">
+
+                                            <div style="background-color: white; border-color: orange" class="cat-wrapper">
+                                                <label style="background-color: white" class="label-search">
+                                                    <select style="background-color: white" name="search_category" class="s1_option">
+                                                        <option value="">Choisir</option>
+                                                        <option value="3">Sol</option>
+                                                        <option value="7">Faiences</option>
+                                                        <option value="8">Façades</option>
+                                                        <option value="14">Lavabo</option>
+                                                        <option value="12">Sanitaire</option>
 
 
-                                                </select>
-                                            </label>
-                                        </div>
+                                                    </select>
+                                                </label>
+                                            </div>
 
-                                        <button type="button" title="Search" class="fa fa-search button-search-pro"></button>
+
+                                            <button type="submit" title="Search" class="fa fa-search button-search-pro"></button><br>
+                                            @if($errors->has('search'))
+                                            <small style="padding-top: 15px !important; color: white" id="emailHelp" class="form-text">{{$errors->first('search')}}</small>
+                                            @endif
+                                            @if($errors->has('search_category'))
+                                            <small style="padding-top: 15px !important; color: white; padding-left: 40%" id="emailHelp" class="form-text">{{$errors->first('search_category')}}</small>
+                                            @endif
+                                        </form>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="widget sw_top-3 sw_top pull-left">
-                            <div class="widget-inner">
-                                <div class="top-form top-form-minicart etrostore-minicart pull-right">
-                                    <div class="top-minicart-icon pull-right">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <a class="cart-contents" href="cart.html" title="View your shopping cart">
-                                            <span class="minicart-number">2</span>
-                                        </a>
-                                    </div>
 
-                                    <div class="wrapp-minicart">
-                                        <div class="minicart-padding">
-                                            <div class="number-item">
-                                                There are <span>items</span> in your cart
-                                            </div>
-
-                                            <ul class="minicart-content">
-                                                <li>
-                                                    <a href="simple_product.html" class="product-image">
-                                                        <img 	width="100" height="100" src="images/1903/45-150x150.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt=""
-                                                                srcset="images/1903/45-150x150.jpg 150w, images/1903/45-300x300.jpg 300w, images/1903/45-180x180.jpg 180w, images/1903/45.jpg 600w"
-                                                                sizes="(max-width: 100px) 100vw, 100px" />
-                                                    </a>
-
-                                                    <div class="detail-item">
-                                                        <div class="product-details">
-                                                            <h4>
-                                                                <a class="title-item" href="simple_product.html">Veniam Dolore</a>
-                                                            </h4>
-
-                                                            <div class="product-price">
-                                                                        <span class="price">
-                                                                            $190.00
-                                                                        </span>
-
-                                                                <div class="qty">
-                                                                    <span class="qty-number">1</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="product-action">
-                                                                <a href="#" class="btn-remove" title="Remove this item">
-                                                                    <span class="fa fa-trash-o"></span>
-                                                                </a>
-
-                                                                <a class="btn-edit" href="cart.html" title="View your shopping cart">
-                                                                    <span class="fa fa-pencil"></span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <a href="simple_product.html" class="product-image">
-                                                        <img 	width="100" height="100" src="images/1903/22-150x150.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt=""
-                                                                srcset="images/1903/22-150x150.jpg 150w, images/1903/22-300x300.jpg 300w, images/1903/22-180x180.jpg 180w, images/1903/22.jpg 600w"
-                                                                sizes="(max-width: 100px) 100vw, 100px" />
-                                                    </a>
-
-                                                    <div class="detail-item">
-                                                        <div class="product-details">
-                                                            <h4>
-                                                                <a class="title-item" href="simple_product.html">Cleaner with bag</a>
-                                                            </h4>
-
-                                                            <div class="product-price">
-                                                                        <span class="price">
-                                                                            $350.00
-                                                                        </span>
-
-                                                                <div class="qty">
-                                                                    <span class="qty-number">1</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="product-action">
-                                                                <a href="#" class="btn-remove" title="Remove this item">
-                                                                    <span class="fa fa-trash-o"></span>
-                                                                </a>
-
-                                                                <a class="btn-edit" href="cart.html" title="View your shopping cart">
-                                                                    <span class="fa fa-pencil"></span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-
-                                            <div class="cart-checkout">
-                                                <div class="price-total">
-                                                    <span class="label-price-total">Total</span>
-
-                                                    <span class="price-total-w">
-                                                                <span class="price">
-                                                                    $540.00
-                                                                </span>
-                                                            </span>
-                                                </div>
-
-                                                <div class="cart-links">
-                                                    <div class="cart-link">
-                                                        <a href="cart.html" title="Cart">View Cart</a>
-                                                    </div>
-
-                                                    <div class="checkout-link">
-                                                        <a href="checkout.html" title="Check Out">Check Out</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="widget widget_nav_menu pull-left">
-                            <div class="widget-inner">
-                                <ul id="menu-wishlist" class="menu">
-                                    <li class="menu-wishlist">
-                                        <a class="item-link" href="wishlist.html">
-                                            <span class="menu-title">Wishlist</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="yith-woocompare-open menu-compare">
-                                        <a class="item-link compare" href="#">
-                                            <span class="menu-title">Compare</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -229,20 +104,27 @@
 
                                     <div id="ResMenuprimary_menu" class="collapse menu-responsive-wrapper">
                                         <ul id="menu-primary-menu" class="etrostore_resmenu">
+                                            <li class="active menu-about-us">
+                                                <a class="item-link" href="/">Acceuil </a>
+                                            </li>
+                                            <li class=" menu-about-us">
+                                                <a class="item-link" href="/shop">Magasin</a>
+                                            </li>
+
                                             <li class="menu-about-us">
-                                                <a class="item-link" href="about_us.html">About Us</a>
+                                                <a class="item-link" href="{{ route('contact') }}">Nous contacter</a>
                                             </li>
 
                                             <li class="menu-contact-us">
-                                                <a class="item-link" href="contact_us.html">Contact Us</a>
+                                                <a class="item-link" href="{{ route('about') }}">A propos de nous</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
 
                                 <ul id="menu-primary-menu-1" class="nav nav-pills nav-mega etrostore-mega etrostore-menures">
-                                    <li class="menu-about-us etrostore-menu-custom level1">
-                                        <a href="about_us.html" class="item-link">
+                                    <li class="{{ request()->is('/')? 'active' : '' }} menu-about-us etrostore-menu-custom level1">
+                                        <a href="/" class="item-link">
                                                     <span class="have-title">
                                                         <span class="menu-title">Acceuil</span>
                                                     </span>
@@ -250,26 +132,26 @@
 
                                     </li>
 
-                                    <li class="menu-contact-us etrostore-menu-custom level1">
-                                        <a href="contact_us.html" class="item-link">
+                                    <li class="{{ request()->is('/shop')? 'active' : '' }}  menu-about-us etrostore-menu-custom level1">
+                                        <a href="{{ route('shop') }}" class="item-link">
                                                     <span class="have-title">
                                                         <span class="menu-title">Magasin</span>
                                                     </span>
                                         </a>
                                     </li>
-                                    <li class="menu-about-us etrostore-menu-custom level1">
-                                        <a href="about_us.html" class="item-link">
+                                    <li class=" {{ request()->is('/about')? 'active' : '' }} menu-about-us etrostore-menu-custom level1">
+                                        <a href="{{ route('about') }}" class="item-link">
                                                     <span class="have-title">
-                                                        <span class="menu-title">About Us</span>
+                                                        <span class="menu-title">A propos </span>
                                                     </span>
                                         </a>
 
                                     </li>
 
                                     <li class="menu-contact-us etrostore-menu-custom level1">
-                                        <a href="contact_us.html" class="item-link">
+                                        <a href="{{ route('contact') }}" class="item-link">
                                                     <span class="have-title">
-                                                        <span class="menu-title">Contact Us</span>
+                                                        <span class="menu-title">Nous contacter</span>
                                                     </span>
                                         </a>
                                     </li>
@@ -279,131 +161,11 @@
                     </div>
                     <!-- /Primary navbar -->
 
-                    <div class="top-form top-form-minicart etrostore-minicart pull-right">
-                        <div class="top-minicart-icon pull-right">
-                            <i class="fa fa-shopping-cart"></i>
-                            <a class="cart-contents" href="cart.html" title="View your shopping cart">
-                                <span class="minicart-number">2</span>
-                            </a>
-                        </div>
-
-                        <div class="wrapp-minicart">
-                            <div class="minicart-padding">
-                                <div class="number-item">
-                                    There are <span>items</span> in your cart
-                                </div>
-
-                                <ul class="minicart-content">
-                                    <li>
-                                        <a href="simple_product.html" class="product-image">
-                                            <img 	width="100" height="100" src="images/1903/45-150x150.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt=""
-                                                    srcset="images/1903/45-150x150.jpg 150w, images/1903/45-300x300.jpg 300w, images/1903/45-180x180.jpg 180w, images/1903/45.jpg 600w"
-                                                    sizes="(max-width: 100px) 100vw, 100px" />
-                                        </a>
-
-                                        <div class="detail-item">
-                                            <div class="product-details">
-                                                <h4>
-                                                    <a class="title-item" href="simple_product.html">Veniam Dolore</a>
-                                                </h4>
-
-                                                <div class="product-price">
-                                                            <span class="price">
-                                                                $190.00
-                                                            </span>
-
-                                                    <div class="qty">
-                                                        <span class="qty-number">1</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="product-action">
-                                                    <a href="#" class="btn-remove" title="Remove this item">
-                                                        <span class="fa fa-trash-o"></span>
-                                                    </a>
-
-                                                    <a class="btn-edit" href="cart.html" title="View your shopping cart">
-                                                        <span class="fa fa-pencil"></span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <a href="simple_product.html" class="product-image">
-                                            <img	 width="100" height="100" src="images/1903/22-150x150.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt=""
-                                                     srcset="images/1903/22-150x150.jpg 150w, images/1903/22-300x300.jpg 300w, images/1903/22-180x180.jpg 180w, images/1903/22.jpg 600w"
-                                                     sizes="(max-width: 100px) 100vw, 100px" />
-                                        </a>
-
-                                        <div class="detail-item">
-                                            <div class="product-details">
-                                                <h4>
-                                                    <a class="title-item" href="simple_product.html">Cleaner with bag</a>
-                                                </h4>
-
-                                                <div class="product-price">
-                                                            <span class="price">
-                                                                $350.00
-                                                            </span>
-
-                                                    <div class="qty">
-                                                        <span class="qty-number">1</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="product-action">
-                                                    <a href="#" class="btn-remove" title="Remove this item">
-                                                        <span class="fa fa-trash-o"></span>
-                                                    </a>
-
-                                                    <a class="btn-edit" href="cart.html" title="View your shopping cart">
-                                                        <span class="fa fa-pencil"></span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                                <div class="cart-checkout">
-                                    <div class="price-total">
-                                        <span class="label-price-total">Total</span>
-
-                                        <span class="price-total-w">
-                                                    <span class="price">
-                                                        $540.00
-                                                    </span>
-                                                </span>
-                                    </div>
-
-                                    <div class="cart-links">
-                                        <div class="cart-link">
-                                            <a href="cart.html" title="Cart">View Cart</a>
-                                        </div>
-
-                                        <div class="checkout-link">
-                                            <a href="checkout.html" title="Check Out">Check Out</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="mid-header pull-right">
                         <div class="widget sw_top">
                                     <span class="stick-sr">
-                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                        <p style="color: #ffd600 " aria-hidden="true"><span style="color: white"></span>Restez chez vous!</p>
                                     </span>
-
-                            <div class="top-form top-search">
-                                <div class="topsearch-entry">
-                                    <input type="text" value="" name="s" class="search-query" placeholder="Keyword here..." />
-                                    <button type="button" class="button-search-pro">Search</button>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -628,7 +390,7 @@
                                                                     </div>
 
                                                                     <div class="content">
-                                                                        <h3>Money Back Guarantee</h3>
+                                                                        <h3>Garentie de remboursement</h3>
                                                                         <p>30 Days Money Back</p>
                                                                     </div>
                                                                 </a>
@@ -641,8 +403,8 @@
                                                                     </div>
 
                                                                     <div class="content">
-                                                                        <h3>Free Worldwide Shipping</h3>
-                                                                        <p>On Order Over $100</p>
+                                                                        <h3>Livraison Gratuite à travers le Sénégal</h3>
+                                                                        <p>Sur Commande de plus de 200.000 FCFA</p>
                                                                     </div>
                                                                 </a>
                                                             </div>
@@ -654,7 +416,7 @@
                                                                     </div>
 
                                                                     <div class="content">
-                                                                        <h3>Member Discount</h3>
+                                                                        <h3>Remise aux Clients fidèles</h3>
                                                                         <p>Upto 70 % Discount</p>
                                                                     </div>
                                                                 </a>
@@ -667,7 +429,7 @@
                                                                     </div>
 
                                                                     <div class="content">
-                                                                        <h3>24/7 Online Support</h3>
+                                                                        <h3>Boutique ouverte 7/7</h3>
                                                                         <p>Technical Support 24/7</p>
                                                                     </div>
                                                                 </a>

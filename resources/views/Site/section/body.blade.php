@@ -22,7 +22,6 @@
                                 </div>
                             </div>
 
-
                             <div class="vc_row vc_row-fluid margin-bottom-30">
                                 <div class="vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner ">
@@ -30,8 +29,8 @@
                                             <div id="_sw_countdown_01" class="sw-woo-container-slider responsive-slider countdown-slider countdown-slider2" data-lg="5" data-md="4" data-sm="2" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false" data-circle="false">
                                                 <div class="resp-slider-container">
                                                     <div class="box-title clearfix">
-                                                        <h3>Produits tendances</h3>
-                                                        <a href="#">voir tout</a>
+                                                        <h3>Meilleurs Produits</h3>
+                                                        <a href="{{ route('shop') }}">voir tout</a>
                                                     </div>
 
                                                     <div class="slider responsive">
@@ -40,43 +39,104 @@
                                                             <div class="item-wrap">
                                                                 <div class="item-detail">
                                                                     <div class="item-content">
+                                                                        <div class="item-image-countdown">
+                                                                            <span class="onsale">Sale!</span>
 
-                                                                        <h4>
-                                                                            <a href="simple_product.html" title="veniam dolore">{{ $sol->model }} </a>
-                                                                        </h4>
+                                                                            <a href="{{ route('details', $sol->id ) }}">
+                                                                                <div class="product-thumb-hover">
+                                                                                    <img  style="width: 160px !important; height: 150px ! important"	width="300" height="100" src="{{ URL::to(asset($sol->image)) }}" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""
+                                                                                          srcset="{{ URL::to(asset($sol->image)) }} 100w, {{ URL::to(asset($sol->image)) }} 150w, {{ URL::to(asset($sol->image)) }} 180w,{{ URL::to(asset($sol->image)) }} 600w"
+                                                                                          sizes="(max-width: 300px) 100vw, 300px" />
+                                                                                </div>
+                                                                            </a>
+
+                                                                            <!-- add to cart, wishlist, compare -->
+                                                                            <div class="item-bottom clearfix">
+                                                                                <a style="background-color: tomato; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $sol->id ) }}">Voir les détails</a>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="product-countdown" data-date="1519776000" data-price="$250" data-starttime="1483747200" data-cdtime="1519776000" data-id="product_sw_countdown_02"></div>
+
+                                                                        <span >Produit de type céramique</span>
 
                                                                         <!-- Price -->
-                                                                        <div class="item-price">
-
+                                                                        <div style="padding-top: 15px; color: tomato" class="item-price">
                                                                             <ins>
                                                                                 {{ $sol->prix }} FCFA
                                                                             </ins>
                                                                         </div>
-                                                                        <div>
-                                                                            <p>Catégorie : céramique</p>
-                                                                        </div>
+                                                                        <h4>
+                                                                            <a href="{{ route('details', $sol->id ) }}" title="veniam dolore">{{ $sol->model }} </a>
+                                                                        </h4>
+
                                                                         <div class="sale-off">new</div>
                                                                     </div>
 
-                                                                    <div class="item-image-countdown">
-                                                                        <span class="onsale">Sale!</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        @endforeach
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                                                                        <a href="simple_product.html">
-                                                                            <div class="product-thumb-hover">
-                                                                                <img  style="width: 160px !important; height: 150px ! important"	width="300" height="100" src="{{ URL::to(asset($sol->image)) }}" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""
-                                                                                        srcset="{{ URL::to(asset($sol->image)) }} 100w, {{ URL::to(asset($sol->image)) }} 150w, {{ URL::to(asset($sol->image)) }} 180w,{{ URL::to(asset($sol->image)) }} 600w"
-                                                                                        sizes="(max-width: 300px) 100vw, 300px" />
+                            <div class="vc_row vc_row-fluid margin-bottom-30">
+                                <div class="vc_column_container vc_col-sm-12">
+                                    <div class="vc_column-inner ">
+                                        <div class="wpb_wrapper">
+                                            <div id="_sw_countdown_01" class="sw-woo-container-slider responsive-slider countdown-slider countdown-slider2" data-lg="5" data-md="4" data-sm="2" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false" data-circle="false">
+                                                <div class="resp-slider-container">
+                                                    <div class="box-title clearfix">
+                                                        <h3>Salle de bains</h3>
+                                                        <a href="#">voir tout</a>
+                                                    </div>
+
+                                                    <div class="slider responsive">
+                                                        @foreach($lavabo_tendance as $lav_tend)
+                                                        <div class="item-countdown product" >
+                                                            <div class="item-wrap">
+                                                                <div class="item-detail">
+                                                                    <div class="item-content">
+                                                                        <div class="item-image-countdown">
+                                                                            <span class="onsale">Sale!</span>
+
+                                                                            <a href={{ route('details', $lav_tend->id ) }}">
+                                                                                <div class="product-thumb-hover">
+                                                                                    <img  style="width: 160px !important; height: 150px ! important"	width="300" height="100" src="{{ URL::to(asset($lav_tend->image)) }}" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""
+                                                                                          srcset="{{ URL::to(asset($lav_tend->image)) }} 100w, {{ URL::to(asset($lav_tend->image)) }} 150w, {{ URL::to(asset($lav_tend->image)) }} 180w,{{ URL::to(asset($lav_tend->image)) }} 600w"
+                                                                                          sizes="(max-width: 300px) 100vw, 300px" />
+                                                                                </div>
+                                                                            </a>
+
+                                                                            <!-- add to cart, wishlist, compare -->
+                                                                            <div class="item-bottom clearfix">
+                                                                                <a style="background-color: tomato; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $lav_tend->id ) }}">Voir les détails</a>
                                                                             </div>
-                                                                        </a>
-
-                                                                        <!-- add to cart, wishlist, compare -->
-                                                                        <div class="item-bottom clearfix">
-                                                                            <a style="background-color: tomato; color:white; padding-right: 10px" class="btn btn-sm">Voir les détails</a>
                                                                         </div>
+
+                                                                        <div class="product-countdown" data-date="1519776000" data-price="$250" data-starttime="1483747200" data-cdtime="1519776000" data-id="product_sw_countdown_02"></div>
+
+                                                                        <span >Produit de type céramique</span>
+
+                                                                        <!-- Price -->
+                                                                        <div style="padding-top: 15px; color: tomato" class="item-price">
+                                                                            <ins>
+                                                                                {{ $lav_tend->prix }} FCFA
+                                                                            </ins>
+                                                                        </div>
+                                                                        <h4>
+                                                                            <a href="{{ route('details', $lav_tend->id ) }}" title="veniam dolore">{{ $lav_tend->model }} </a>
+                                                                        </h4>
+
+                                                                        <div class="sale-off">new</div>
                                                                     </div>
 
-                                                                    <div class="product-countdown" data-date="1519776000" data-price="$250" data-starttime="1483747200" data-cdtime="1519776000" data-id="product_sw_countdown_02"></div>
-                                                                </div>
+                                                           </div>
                                                             </div>
                                                         </div>
                                                         @endforeach
@@ -112,7 +172,7 @@
                                             <div id="slider_sw_woo_slider_widget_2" class="responsive-slider woo-slider-default sw-child-cat2" data-lg="5" data-md="4" data-sm="2" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false" data-circle="false">
                                                 <div class="child-top clearfix">
                                                     <div class="box-title pull-left">
-                                                        <h3>Nouveau produits</h3>
+                                                        <h3>Autres produits</h3>
                                                         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#child_sw_woo_slider_02" aria-expanded="false">
                                                             <span class="icon-bar"></span>
                                                             <span class="icon-bar"></span>
@@ -146,9 +206,50 @@
                                                             <div class="item-wrap">
                                                                 <div class="item-detail">
                                                                     <div class="item-content">
+                                                                        <div class="item-img products-thumb">
+                                                                            <span class="onsale">Sale!</span>
 
+                                                                            <a href="{{ route('details', $all->id ) }}">
+                                                                                <div class="product-thumb-hover">
+                                                                                    <img  style="width: 160px !important; height: 150px ! important"	width="300" height="100" src="{{ URL::to(asset($all->image)) }}" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""
+                                                                                          srcset="{{ URL::to(asset($all->image)) }} 100w, {{ URL::to(asset($all->image)) }} 150w, {{ URL::to(asset($all->image)) }} 180w,{{ URL::to(asset($all->image)) }} 600w"
+                                                                                          sizes="(max-width: 300px) 100vw, 300px" />
+                                                                                </div>
+                                                                            </a>
+
+                                                                            <!-- add to cart, wishlist, compare -->
+                                                                            <div class="item-bottom clearfix">
+                                                                                <a rel="nofollow" href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart" title="Add to Cart">Add to cart</a>
+
+                                                                                <a href="javascript:void(0)" class="compare button" rel="nofollow" title="Add to Compare">Compare</a>
+
+                                                                                <div class="yith-wcwl-add-to-wishlist ">
+                                                                                    <div class="yith-wcwl-add-button show" style="display:block">
+                                                                                        <a href="wishlist.html" rel="nofollow" class="add_to_wishlist">Add to Wishlist</a>
+                                                                                        <img src="images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" />
+                                                                                    </div>
+
+                                                                                    <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                                                        <span class="feedback">Product added!</span>
+                                                                                        <a href="#" rel="nofollow">Browse Wishlist</a>
+                                                                                    </div>
+
+                                                                                    <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                                                        <span class="feedback">The product is already in the wishlist!</span>
+                                                                                        <a href="#" rel="nofollow">Browse Wishlist</a>
+                                                                                    </div>
+
+                                                                                    <div style="clear:both"></div>
+                                                                                    <div class="yith-wcwl-wishlistaddresponse"></div>
+                                                                                </div>
+
+                                                                                <div class="clear"></div>
+                                                                                <a href="ajax/fancybox/example.html" data-fancybox-type="ajax" class="sm_quickview_handler-list fancybox fancybox.ajax">Quick View </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <span>Produit de type ceramique</span>
                                                                         <h4>
-                                                                            <a href="simple_product.html" title="veniam dolore">{{ $all->model }}</a>
+                                                                            <a href="{{ route('details', $all->id ) }}" title="veniam dolore">{{ $all->model }}</a>
                                                                         </h4>
 
                                                                         <!-- Price -->
@@ -161,47 +262,7 @@
                                                                         <div class="sale-off">New</div>
                                                                     </div>
 
-                                                                    <div class="item-img products-thumb">
-                                                                        <span class="onsale">Sale!</span>
 
-                                                                        <a href="simple_product.html">
-                                                                            <div class="product-thumb-hover">
-                                                                                <img  style="width: 160px !important; height: 150px ! important"	width="300" height="100" src="{{ URL::to(asset($all->image)) }}" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""
-                                                                                      srcset="{{ URL::to(asset($all->image)) }} 100w, {{ URL::to(asset($all->image)) }} 150w, {{ URL::to(asset($all->image)) }} 180w,{{ URL::to(asset($all->image)) }} 600w"
-                                                                                      sizes="(max-width: 300px) 100vw, 300px" />
-                                                                            </div>
-                                                                        </a>
-
-                                                                        <!-- add to cart, wishlist, compare -->
-                                                                        <div class="item-bottom clearfix">
-                                                                            <a rel="nofollow" href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart" title="Add to Cart">Add to cart</a>
-
-                                                                            <a href="javascript:void(0)" class="compare button" rel="nofollow" title="Add to Compare">Compare</a>
-
-                                                                            <div class="yith-wcwl-add-to-wishlist ">
-                                                                                <div class="yith-wcwl-add-button show" style="display:block">
-                                                                                    <a href="wishlist.html" rel="nofollow" class="add_to_wishlist">Add to Wishlist</a>
-                                                                                    <img src="images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" />
-                                                                                </div>
-
-                                                                                <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
-                                                                                    <span class="feedback">Product added!</span>
-                                                                                    <a href="#" rel="nofollow">Browse Wishlist</a>
-                                                                                </div>
-
-                                                                                <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
-                                                                                    <span class="feedback">The product is already in the wishlist!</span>
-                                                                                    <a href="#" rel="nofollow">Browse Wishlist</a>
-                                                                                </div>
-
-                                                                                <div style="clear:both"></div>
-                                                                                <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                                            </div>
-
-                                                                            <div class="clear"></div>
-                                                                            <a href="ajax/fancybox/example.html" data-fancybox-type="ajax" class="sm_quickview_handler-list fancybox fancybox.ajax">Quick View </a>
-                                                                        </div>
-                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -209,9 +270,11 @@
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
 
                             <div class="vc_row vc_row-fluid margin-bottom-60">
@@ -228,10 +291,10 @@
                                                     <div class="item cf">
                                                         <div class="item-inner">
                                                             <div class="item-img">
-                                                                <a href="simple_product.html" title="Veniam dolore">
+                                                                <a href="{{ route('details', $sanitaire->id) }}" title="Veniam dolore">
                                                                     <img style="width: 60px; height: 70px"	width="180" height="180" src="{{ URL::to(asset($sanitaire->image)) }}" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt=""
-                                                                            srcset="{{ URL::to(asset($sanitaire->image)) }} 180w, {{ URL::to(asset($sanitaire->image)) }} 150w, {{ URL::to(asset($sanitaire->image)) }} 300w, {{ URL::to(asset($sanitaire->image)) }} 600w"
-                                                                            sizes="(max-width: 180px) 50vw, 180px" />
+                                                                         srcset="{{ URL::to(asset($sanitaire->image)) }} 180w, {{ URL::to(asset($sanitaire->image)) }} 150w, {{ URL::to(asset($sanitaire->image)) }} 300w, {{ URL::to(asset($sanitaire->image)) }} 600w"
+                                                                         sizes="(max-width: 180px) 50vw, 180px" />
                                                                 </a>
                                                             </div>
 
@@ -246,7 +309,7 @@
                                                                 <!-- end rating  -->
 
                                                                 <h4>
-                                                                    <a href="simple_product.html" title="veniam dolore">{{ $sanitaire->model }}</a>
+                                                                    <a href="{{ route('details', $sanitaire->id) }}" title="veniam dolore">{{ $sanitaire->model }}</a>
                                                                 </h4>
 
                                                                 <!-- price -->
@@ -274,13 +337,13 @@
                                                 </div>
 
                                                 <div class="wrap-content">
-                                                    @foreach($sanitaire_catalogue as $sanitaire)
+                                                    @foreach($sol_footer as $solc)
                                                     <div class="item cf">
                                                         <div class="item-inner">
                                                             <div class="item-img">
-                                                                <a href="simple_product.html" title="Veniam dolore">
-                                                                    <img style="width: 60px; height: 70px"	width="180" height="180" src="{{ URL::to(asset($sanitaire->image)) }}" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt=""
-                                                                         srcset="{{ URL::to(asset($sanitaire->image)) }} 180w, {{ URL::to(asset($sanitaire->image)) }} 150w, {{ URL::to(asset($sanitaire->image)) }} 300w, {{ URL::to(asset($sanitaire->image)) }} 600w"
+                                                                <a href="{{ route('details', $solc->id) }}" title="Veniam dolore">
+                                                                    <img style="width: 60px; height: 70px"	width="180" height="180" src="{{ URL::to(asset($solc->image)) }}" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt=""
+                                                                         srcset="{{ URL::to(asset($solc->image)) }} 180w, {{ URL::to(asset($solc->image)) }} 150w, {{ URL::to(asset($solc->image)) }} 300w, {{ URL::to(asset($solc->image)) }} 600w"
                                                                          sizes="(max-width: 180px) 50vw, 180px" />
                                                                 </a>
                                                             </div>
@@ -296,13 +359,13 @@
                                                                 <!-- end rating  -->
 
                                                                 <h4>
-                                                                    <a href="simple_product.html" title="veniam dolore">{{ $sanitaire->model }}</a>
+                                                                    <a href="{{ route('details', $solc->id) }}" title="veniam dolore">{{ $solc->model }}</a>
                                                                 </h4>
 
                                                                 <!-- price -->
                                                                 <div class="item-price">
                                                                     <ins style="color: tomato">
-                                                                        {{ $sanitaire->prix }} FCFA
+                                                                        {{ $solc->prix }} FCFA
                                                                     </ins>
                                                                 </div>
                                                             </div>
@@ -320,17 +383,17 @@
                                         <div class="wpb_wrapper">
                                             <div id="sw_recommend_product-01" class="sw-recommend-product vc_element sw-accordion-product">
                                                 <div class="box-slider-title">
-                                                    <h2>Sanitaire</h2>
+                                                    <h2>Lavabo</h2>
                                                 </div>
 
                                                 <div class="wrap-content">
-                                                    @foreach($sanitaire_catalogue as $sanitaire)
+                                                    @foreach($lavabo_footer as $lav)
                                                     <div class="item cf">
                                                         <div class="item-inner">
                                                             <div class="item-img">
-                                                                <a href="simple_product.html" title="Veniam dolore">
-                                                                    <img style="width: 60px; height: 70px"	width="180" height="180" src="{{ URL::to(asset($sanitaire->image)) }}" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt=""
-                                                                         srcset="{{ URL::to(asset($sanitaire->image)) }} 180w, {{ URL::to(asset($sanitaire->image)) }} 150w, {{ URL::to(asset($sanitaire->image)) }} 300w, {{ URL::to(asset($sanitaire->image)) }} 600w"
+                                                                <a href="{{ route('details', $lav->id) }}" title="Veniam dolore">
+                                                                    <img style="width: 60px; height: 70px"	width="180" height="180" src="{{ URL::to(asset($lav->image)) }}" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt=""
+                                                                         srcset="{{ URL::to(asset($lav->image)) }} 180w, {{ URL::to(asset($lav->image)) }} 150w, {{ URL::to(asset($lav->image)) }} 300w, {{ URL::to(asset($lav->image)) }} 600w"
                                                                          sizes="(max-width: 180px) 50vw, 180px" />
                                                                 </a>
                                                             </div>
@@ -346,13 +409,13 @@
                                                                 <!-- end rating  -->
 
                                                                 <h4>
-                                                                    <a href="simple_product.html" title="veniam dolore">{{ $sanitaire->model }}</a>
+                                                                    <a href="{{ route('details', $lav->id) }}" title="veniam dolore">{{ $lav->model }}</a>
                                                                 </h4>
 
                                                                 <!-- price -->
                                                                 <div class="item-price">
                                                                     <ins style="color: tomato">
-                                                                        {{ $sanitaire->prix }} FCFA
+                                                                        {{ $lav->prix }} FCFA
                                                                     </ins>
                                                                 </div>
                                                             </div>
@@ -370,17 +433,17 @@
                                         <div class="wpb_wrapper">
                                             <div id="sw_recommend_product-01" class="sw-recommend-product vc_element sw-accordion-product">
                                                 <div class="box-slider-title">
-                                                    <h2>Sanitaire</h2>
+                                                    <h2>Faiences</h2>
                                                 </div>
 
                                                 <div class="wrap-content">
-                                                    @foreach($sanitaire_catalogue as $sanitaire)
+                                                    @foreach($faiences_footer as $faien)
                                                     <div class="item cf">
                                                         <div class="item-inner">
                                                             <div class="item-img">
-                                                                <a href="simple_product.html" title="Veniam dolore">
-                                                                    <img style="width: 60px; height: 70px"	width="180" height="180" src="{{ URL::to(asset($sanitaire->image)) }}" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt=""
-                                                                         srcset="{{ URL::to(asset($sanitaire->image)) }} 180w, {{ URL::to(asset($sanitaire->image)) }} 150w, {{ URL::to(asset($sanitaire->image)) }} 300w, {{ URL::to(asset($sanitaire->image)) }} 600w"
+                                                                <a href="{{ route('details', $faien->id) }}" title="Veniam dolore">
+                                                                    <img style="width: 60px; height: 70px"	width="180" height="180" src="{{ URL::to(asset($faien->image)) }}" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt=""
+                                                                         srcset="{{ URL::to(asset($faien->image)) }} 180w, {{ URL::to(asset($faien->image)) }} 150w, {{ URL::to(asset($faien->image)) }} 300w, {{ URL::to(asset($faien->image)) }} 600w"
                                                                          sizes="(max-width: 180px) 50vw, 180px" />
                                                                 </a>
                                                             </div>
@@ -396,13 +459,13 @@
                                                                 <!-- end rating  -->
 
                                                                 <h4>
-                                                                    <a href="simple_product.html" title="veniam dolore">{{ $sanitaire->model }}</a>
+                                                                    <a href="{{ route('details', $faien->id) }}" title="veniam dolore">{{ $faien->model }}</a>
                                                                 </h4>
 
                                                                 <!-- price -->
                                                                 <div class="item-price">
                                                                     <ins style="color: tomato">
-                                                                        {{ $sanitaire->prix }} FCFA
+                                                                        {{ $faien->prix }} FCFA
                                                                     </ins>
                                                                 </div>
                                                             </div>
