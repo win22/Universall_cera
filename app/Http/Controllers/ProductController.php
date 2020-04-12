@@ -38,6 +38,15 @@ class ProductController extends Controller
         $produit = Produit::where('id', $id)
             ->where('status', 1)
             ->first();
-        return view('Site.pages.details', ['produit' => $produit]);
+        $all_product = Produit::take(8)
+           ->get();
+        return view('Site.pages.details', ['produit' => $produit])
+            ->with('all_produit', $all_product);
+    }
+
+    public function all_detail()
+    {
+
+
     }
 }

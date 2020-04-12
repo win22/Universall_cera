@@ -103,18 +103,18 @@
 
                                     <div id="ResMenuprimary_menu" class="collapse menu-responsive-wrapper">
                                         <ul id="menu-primary-menu" class="etrostore_resmenu">
-                                            <li class="active menu-about-us">
+                                            <li class="{{ request()->is('/')? 'active' : '' }} menu-about-us">
                                                 <a class="item-link" href="/">Acceuil </a>
                                             </li>
-                                            <li class=" menu-about-us">
+                                            <li class="{{ request()->is('/shop')? 'active' : '' }} menu-about-us">
                                                 <a class="item-link" href="/shop">Magasin</a>
                                             </li>
 
-                                            <li class="menu-contact-us">
+                                            <li class="{{ request()->is('/about')? 'active' : '' }} menu-contact-us">
                                                 <a class="item-link" href="{{ route('about') }}">A propos de nous</a>
                                             </li>
 
-                                            <li class="menu-about-us">
+                                            <li class="{{ request()->is('/contact')? 'active' : '' }} menu-about-us">
                                                 <a class="item-link" href="{{ route('contact') }}">Nous contacter</a>
                                             </li>
                                         </ul>

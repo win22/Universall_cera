@@ -188,7 +188,7 @@
                                                 <div class="wpb_wrapper">
                                                     <div class="ya-logo">
                                                         <a href="home_page_1.html">
-                                                            <img src="images/icons/logo-footer.png" alt="logo" />
+                                                            <img style="width: 100px" src="{{asset('site/images/icons/logoucs.jpg') }}" alt="logo" />
                                                         </a>
                                                     </div>
                                                 </div>
@@ -198,26 +198,14 @@
                                                 <div class="wpb_wrapper">
                                                     <div class="infomation">
                                                         <p>
-                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                        <ul style="color: #ffaa00">
+                                                            <li>(+221) 33 878 65 60.</li>
+                                                            <li>(801) 2345 - 6788 / (801) 2345 - 6789</li>
+                                                            <li><i class=""></i> Adresse:Keur Massar Médina kelle N0 176 P.A, Dakar Sénégal</li>
+                                                        </ul>
                                                         </p>
 
-                                                        <div class="info-support">
-                                                            <ul>
-                                                                <li>No 1123, Marmora Road, Glasgow, D04 89GR.</li>
-                                                                <li>(801) 2345 - 6788 / (801) 2345 - 6789</li>
-                                                                <li><a href="mailto:contact@etrostore.com">support@etrostore.com</a></li>
-                                                            </ul>
-                                                        </div>
 
-                                                        <div class="store">
-                                                            <a href="#">
-                                                                <img src="images/1903/app-store.png" alt="store" title="store" />
-                                                            </a>
-
-                                                            <a href="#">
-                                                                <img src="images/1903/google-store.png" alt="store" title="store" />
-                                                            </a>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -230,44 +218,33 @@
                                         <div class="wpb_wrapper">
                                             <div class="vc_wp_custommenu wpb_content_element">
                                                 <div class="widget widget_nav_menu">
-                                                    <h2 class="widgettitle">Support</h2>
+                                                    <h2 class="widgettitle">Réseaux sociaux </h2>
 
                                                     <ul id="menu-support" class="menu">
                                                         <li class="menu-product-support">
                                                             <a class="item-link" href="#">
-                                                                <span class="menu-title">Product Support</span>
+                                                                <span class="menu-title">Facebook</span>
                                                             </a>
                                                         </li>
 
                                                         <li class="menu-pc-setup-support-services">
                                                             <a class="item-link" href="#">
-                                                                <span class="menu-title">PC Setup & Support Services</span>
+                                                                <span class="menu-title">Instagram</span>
                                                             </a>
                                                         </li>
 
                                                         <li class="menu-extended-service-plans">
                                                             <a class="item-link" href="#">
-                                                                <span class="menu-title">Extended Service Plans</span>
+                                                                <span class="menu-title">Tweeter</span>
                                                             </a>
                                                         </li>
 
                                                         <li class="menu-community">
                                                             <a class="item-link" href="#">
-                                                                <span class="menu-title">Community</span>
+                                                                <span class="menu-title">Youtube</span>
                                                             </a>
                                                         </li>
 
-                                                        <li class="menu-product-manuals">
-                                                            <a class="item-link" href="#">
-                                                                <span class="menu-title">Product Manuals</span>
-                                                            </a>
-                                                        </li>
-
-                                                        <li class="menu-product-registration">
-                                                            <a class="item-link" href="#">
-                                                                <span class="menu-title">Product Registration</span>
-                                                            </a>
-                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -280,57 +257,34 @@
                                         <div class="wpb_wrapper">
                                             <div class="vc_wp_custommenu wpb_content_element">
                                                 <div class="widget widget_nav_menu">
-                                                    <h2 class="widgettitle">Your Links</h2>
-
+                                                    <h2 class="widgettitle">Liens </h2>
                                                     <ul id="menu-your-links" class="menu">
-                                                        <li class="menu-my-account">
-                                                            <a class="item-link" href="my_account.html">
-                                                                <span class="menu-title">My Account</span>
-                                                            </a>
-                                                        </li>
-
-                                                        <li class="menu-order-tracking">
-                                                            <a class="item-link" href="#">
-                                                                <span class="menu-title">Order Tracking</span>
-                                                            </a>
-                                                        </li>
-
-                                                        <li class="menu-watch-list">
-                                                            <a class="item-link" href="#">
-                                                                <span class="menu-title">Watch List</span>
+                                                        <li class="menu-about-us">
+                                                            <a class="item-link" href="/">
+                                                                <span class="menu-title">Acceuil</span>
                                                             </a>
                                                         </li>
 
                                                         <li class="menu-customer-service">
-                                                            <a class="item-link" href="#">
-                                                                <span class="menu-title">Customer Service</span>
+                                                            <a class="item-link" href="{{ route('shop') }}">
+                                                                <span class="menu-title">Magasin</span>
                                                             </a>
                                                         </li>
 
-                                                        <li class="menu-returns-exchanges">
-                                                            <a class="item-link" href="#">
-                                                                <span class="menu-title">Returns / Exchanges</span>
+                                                        <li class="menu-privacy-policy">
+                                                            <a class="item-link" href="{{ route('about') }}">
+                                                                <span class="menu-title">A propos</span>
                                                             </a>
                                                         </li>
 
-                                                        <li class="menu-faqs">
-                                                            <a class="item-link" href="#">
-                                                                <span class="menu-title">FAQs</span>
+                                                        <li class="menu-site-map">
+                                                            <a class="item-link" href="{{ route('contact') }}">
+                                                                <span class="menu-title">Nous contacter</span>
                                                             </a>
                                                         </li>
 
-                                                        <li class="menu-financing">
-                                                            <a class="item-link" href="#">
-                                                                <span class="menu-title">Financing</span>
-                                                            </a>
-                                                        </li>
-
-                                                        <li class="menu-card">
-                                                            <a class="item-link" href="#">
-                                                                <span class="menu-title">Card</span>
-                                                            </a>
-                                                        </li>
                                                     </ul>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -344,12 +298,9 @@
                                                 <div class="wpb_wrapper">
                                                     <div class="sp-map">
                                                         <div class="title">
-                                                            <h2>find a store</h2>
+                                                            <h2>Localiser la boutique</h2>
                                                         </div>
-
-                                                        <img src="images/1903/map.jpg" alt="map" title="map" />
-
-                                                        <a href="#" class="link-map">Store locator</a>
+                                                        <a style="color: white" href="#" class="link-map">Localiser la boutique</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -358,47 +309,6 @@
                                 </div>
                             </div>
 
-                            <div class="vc_wp_custommenu wpb_content_element wrap-cus">
-                                <div class="widget widget_nav_menu">
-                                    <ul id="menu-infomation" class="menu">
-                                        <li class="menu-about-us">
-                                            <a class="item-link" href="about_us.html">
-                                                <span class="menu-title">About Us</span>
-                                            </a>
-                                        </li>
-
-                                        <li class="menu-customer-service">
-                                            <a class="item-link" href="#">
-                                                <span class="menu-title">Customer Service</span>
-                                            </a>
-                                        </li>
-
-                                        <li class="menu-privacy-policy">
-                                            <a class="item-link" href="#">
-                                                <span class="menu-title">Privacy Policy</span>
-                                            </a>
-                                        </li>
-
-                                        <li class="menu-site-map">
-                                            <a class="item-link" href="#">
-                                                <span class="menu-title">Site Map</span>
-                                            </a>
-                                        </li>
-
-                                        <li class="menu-orders-and-returns">
-                                            <a class="item-link" href="#">
-                                                <span class="menu-title">Orders and Returns</span>
-                                            </a>
-                                        </li>
-
-                                        <li class="menu-contact-us">
-                                            <a class="item-link" href="contact_us.html">
-                                                <span class="menu-title">Contact Us</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -410,7 +320,7 @@
             <div class="container">
                 <!-- Copyright text -->
                 <div class="copyright-text pull-left">
-                    <p>Etro Store - Premium Multipurpose HTML5/CSS3 Theme - Designed by <a href="http://www.smartaddons.com">SmartAddons.Com</a>.</p>
+                    <p>© 2020. Tous les droits sont réservés</p>
                 </div>
 
                 <div class="sidebar-copyright pull-right">
@@ -418,8 +328,8 @@
                         <div class="widget-inner">
                             <div class="">
                                 <div class="payment">
-                                    <a href="#">
-                                        <img src="images/1903/paypal.png" alt="payment" title="payment" />
+                                    <a style="color: white" href="#">
+                                        <p> Designed by <a style="color: #ffaa00" href="http://nataalagency.com/">   Nataal Agency  </a>.</p>
                                     </a>
                                 </div>
                             </div>
