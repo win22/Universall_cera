@@ -21,8 +21,9 @@ Route::get('/details/{id}', 'ProductController@details')->name('details');
 
 
 Route::post('/searh', 'ProductController@search')->name('search');
+Route::post('/newsletter', 'ProductController@news')->name('newslet');
 Route::get('/shop', 'ShopController@shop')->name('shop');
-
+Route::get('/product_by_category/{id}' , 'ProductController@product_category')->name('category');
 
 
 

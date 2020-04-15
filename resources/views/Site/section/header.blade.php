@@ -8,7 +8,7 @@
                 <div class="rows">
                     <!-- SIDEBAR TOP MENU -->
                     <div class="pull-left top1">
-                        <div style="color: white; font-family: 'Manjari Bold'; font-size: 18px" class="call-us"><span></span>Restez chez vous s'il vous plait</div>
+                        <div id="rester" style="color: white; font-family: 'Manjari Bold'; font-size: 18px" class="call-us"><span></span>Restez chez vous s'il vous plait</div>
                     </div>
 
                     <div class="pull-right">
@@ -160,11 +160,19 @@
                         </nav>
                     </div>
                     <!-- /Primary navbar -->
-
+                    <p hidden class="alert ">{{ $message = Session::get('message')}}</p>
+                    @if($message)
+                    <div id="alert"  class="alert alert-success alert-with-icon small right ml-5">
+                        <i class="fa fa-bell" data-notify="icon"></i>
+                        </button>
+                        <span class="text-center data-notify="message"> {{$message }} </span>
+                    </div>
+                    {{ Session::put('message',NULL) }}
+                    @endif
                     <div class="mid-header pull-right">
                         <div class="widget sw_top">
                                     <span class="stick-sr">
-                                        <p style="color: #ffd600 " aria-hidden="true"><span style="color: white"></span>Restez chez vous!</p>
+                                        <p id="rester" style="color: #ffffff " aria-hidden="true"><span style="color: white"></span>Restez chez vous!</p>
                                     </span>
                         </div>
                     </div>
@@ -203,20 +211,20 @@
                                                                         <div id="ResMenuvertical_menu" class="collapse menu-responsive-wrapper">
                                                                             <ul id="menu-vertical-menu" class="etrostore_resmenu">
                                                                                 <li class="menu-computers-laptops">
-                                                                                    <a class="item-link" href="simple_product.html">Sol</a>
+                                                                                    <a class="item-link" href="{{ route('category', 3) }}">Sol</a>
                                                                                 </li>
                                                                                 <li class="menu-computers-laptops">
-                                                                                    <a class="item-link" href="simple_product.html">Faiences</a>
+                                                                                    <a class="item-link" href="{{ route('category', 7) }}">Faiences</a>
                                                                                 </li>
                                                                                 <li class="menu-computers-laptops">
-                                                                                    <a class="item-link" href="simple_product.html">Facades</a>
+                                                                                    <a class="item-link" href="{{ route('category', 8) }}">Facades</a>
                                                                                 </li>
 
                                                                                 <li class="menu-vacuum-cleaner">
-                                                                                    <a class="item-link" href="simple_product.html">Salle de bain</a>
+                                                                                    <a class="item-link" href="{{ route('category', 12) }}">Salle de bain</a>
                                                                                 </li>
                                                                                 <li class="menu-computers-laptops">
-                                                                                    <a class="item-link" href="simple_product.html">Sanitaire</a>
+                                                                                    <a class="item-link" href="{{ route('category', 12) }}">Sanitaire</a>
                                                                                 </li>
 
                                                                             </ul>
@@ -225,7 +233,7 @@
 
                                                                     <ul id="menu-vertical-menu-1" class="nav vertical-megamenu etrostore-mega etrostore-menures">
                                                                         <li class="menu-computers-laptops etrostore-menu-custom level1">
-                                                                            <a href="simple_product.html" class="item-link">
+                                                                            <a href="{{ route('category', 3) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#7ac143"></span>
 
@@ -235,7 +243,7 @@
                                                                         </li>
 
                                                                         <li class="menu-computers-laptops etrostore-menu-custom level1">
-                                                                            <a href="simple_product.html" class="item-link">
+                                                                            <a href="{{ route('category', 7) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#f03442"></span>
                                                                                             <span class="menu-title">Faiences</span>
@@ -243,7 +251,7 @@
                                                                             </a>
                                                                         </li>
                                                                         <li class="menu-computers-laptops etrostore-menu-custom level1">
-                                                                            <a href="simple_product.html" class="item-link">
+                                                                            <a href="{{ route('category', 8) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#efc73a"></span>
 
@@ -252,7 +260,7 @@
                                                                             </a>
                                                                         </li>
                                                                         <li class="menu-computers-laptops etrostore-menu-custom level1">
-                                                                            <a href="simple_product.html" class="item-link">
+                                                                            <a href="{{ route('category', 10) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#42b8d1"></span>
 
@@ -261,7 +269,7 @@
                                                                             </a>
                                                                         </li>
                                                                         <li class="menu-computers-laptops etrostore-menu-custom level1">
-                                                                            <a href="simple_product.html" class="item-link">
+                                                                            <a href="{{ route('category', 12) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#7ac143"></span>
 
@@ -270,7 +278,7 @@
                                                                             </a>
                                                                         </li>
                                                                         <li class="menu-computers-laptops etrostore-menu-custom level1">
-                                                                            <a href="simple_product.html" class="item-link">
+                                                                            <a href="{{ route('category', 14) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#42b8d1"></span>
 
@@ -279,7 +287,7 @@
                                                                             </a>
                                                                         </li>
                                                                         <li class="menu-computers-laptops etrostore-menu-custom level1">
-                                                                            <a href="simple_product.html" class="item-link">
+                                                                            <a href="{{ route('category', 11) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#7ac143"></span>
 
@@ -288,7 +296,7 @@
                                                                             </a>
                                                                         </li>
                                                                         <li class="menu-computers-laptops etrostore-menu-custom level1">
-                                                                            <a href="simple_product.html" class="item-link">
+                                                                            <a href="{{ route('category', 3) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#42b8d1"></span>
 
@@ -297,7 +305,7 @@
                                                                             </a>
                                                                         </li>
                                                                         <li class="menu-computers-laptops etrostore-menu-custom level1">
-                                                                            <a href="simple_product.html" class="item-link">
+                                                                            <a href="{{ route('category', 9) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#13528c"></span>
 
@@ -307,7 +315,7 @@
                                                                         </li>
 
                                                                         <li class="menu-computers-laptops etrostore-menu-custom level1">
-                                                                            <a href="simple_product.html" class="item-link">
+                                                                            <a href="{{ route('category', 10) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#13528c"></span>
 
@@ -391,7 +399,7 @@
 
                                                                     <div class="content">
                                                                         <h3>Garentie de remboursement</h3>
-                                                                        <p>30 Days Money Back</p>
+
                                                                     </div>
                                                                 </a>
                                                             </div>
@@ -404,7 +412,7 @@
 
                                                                     <div class="content">
                                                                         <h3>Livraison Gratuite à travers le Sénégal</h3>
-                                                                        <p>Sur Commande de plus de 200.000 FCFA</p>
+
                                                                     </div>
                                                                 </a>
                                                             </div>
@@ -417,7 +425,7 @@
 
                                                                     <div class="content">
                                                                         <h3>Remise aux Clients fidèles</h3>
-                                                                        <p>Upto 70 % Discount</p>
+
                                                                     </div>
                                                                 </a>
                                                             </div>
@@ -429,8 +437,8 @@
                                                                     </div>
 
                                                                     <div class="content">
-                                                                        <h3>Boutique ouverte 7/7</h3>
-                                                                        <p>Technical Support 24/7</p>
+                                                                        <h3>Notre boutique ouverte 7/7</h3>
+
                                                                     </div>
                                                                 </a>
                                                             </div>

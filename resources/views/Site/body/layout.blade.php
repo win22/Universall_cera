@@ -144,6 +144,29 @@
         });
     });
 </script>
+<script>
+    var rester = document.querySelectorAll('#rester')
+    for (var i = 0; i < rester.length; i++) {
+
+        // je cree une fonction qui s'appele elle m'aime
+        (function(p)
+        {
+            window.setInterval(function()
+            {
+                p.classList.toggle('yel')
+            }, 1000)
+        }(rester[i]))
+    }
+</script>
+
+<script>
+    jQuery(function ($) {
+        var alert = $('#alert');
+        if(alert.length > 0){
+            alert.hide().slideDown(730).delay(3850).slideUp(600);
+        }
+    })
+</script>
 
 </body>
 </html>

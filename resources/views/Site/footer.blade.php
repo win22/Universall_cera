@@ -3,111 +3,8 @@
     <footer id="footer" class="footer default theme-clearfix">
         <!-- Content footer -->
         <div class="container">
-            <div class="vc_row vc_row-fluid">
-                <div class="vc_column_container vc_col-sm-12">
-                    <div class="vc_column-inner ">
-                        <div class="wpb_wrapper">
-                            <div id="sw_testimonial01" class="testimonial-slider client-wrapper-b carousel slide " data-interval="0">
-                                <div class="carousel-cl nav-custom">
-                                    <a class="prev-test fa fa-angle-left" href="#sw_testimonial01" role="button" data-slide="prev"><span></span></a>
-                                    <a class="next-test fa fa-angle-right" href="#sw_testimonial01" role="button" data-slide="next"><span></span></a>
-                                </div>
 
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <div class="item-inner">
-                                            <div class="image-client pull-left">
-                                                <a href="#" title="">
-                                                    <img width="127" height="127" src="images/1903/tm3.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" />
-                                                </a>
-                                            </div>
 
-                                            <div class="client-say-info">
-                                                <div class="client-comment">
-                                                    In auctor ex id urna faucibus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit....
-                                                </div>
-
-                                                <div class="name-client">
-                                                    <h2><a href="#" title="">Jerry</a></h2>
-                                                    <p>Web Developer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item-inner">
-                                            <div class="image-client pull-left">
-                                                <a href="#" title="">
-                                                    <img width="127" height="127" src="images/1903/tm1.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" />
-                                                </a>
-                                            </div>
-
-                                            <div class="client-say-info">
-                                                <div class="client-comment">
-                                                    In auctor ex id urna faucibus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit....
-                                                </div>
-
-                                                <div class="name-client">
-                                                    <h2>
-                                                        <a href="#" title="">David Gand</a>
-                                                    </h2>
-
-                                                    <p>Designer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="item ">
-                                        <div class="item-inner">
-                                            <div class="image-client pull-left">
-                                                <a href="#" title="">
-                                                    <img width="127" height="127" src="images/1903/tm2.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" />
-                                                </a>
-                                            </div>
-
-                                            <div class="client-say-info">
-                                                <div class="client-comment">
-                                                    In auctor ex id urna faucibus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit....
-                                                </div>
-
-                                                <div class="name-client">
-                                                    <h2>
-                                                        <a href="#" title="">Taylor Hill</a>
-                                                    </h2>
-
-                                                    <p>Developer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="item-inner">
-                                            <div class="image-client pull-left">
-                                                <a href="#" title="">
-                                                    <img width="127" height="127" src="images/1903/tm3.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" />
-                                                </a>
-                                            </div>
-
-                                            <div class="client-say-info">
-                                                <div class="client-comment">
-                                                    In auctor ex id urna faucibus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit....
-                                                </div>
-
-                                                <div class="name-client">
-                                                    <h2>
-                                                        <a href="#" title="">JOHN DOE</a>
-                                                    </h2>
-
-                                                    <p>Designer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row vc_row-fluid footer-style1 vc_row-no-padding">
                 <div class="container float vc_column_container vc_col-sm-12">
@@ -120,12 +17,18 @@
                                             <div class="wpb_text_column wpb_content_element ">
                                                 <div class="wpb_wrapper">
                                                     <div class="wrap-newletter">
-                                                        <h3>NEWSLETTER SIGNUP</h3>
+                                                        <h3>NEWSLETTER</h3>
 
                                                         <div class="mc4wp-form">
                                                             <div class="newsletter-content">
-                                                                <input type="email" class="newsletter-email" name="EMAIL" placeholder="Your email" required="" />
-                                                                <input class="newsletter-submit" type="submit" value="Subscribe" />
+                                                                <form action="{{ route('newslet') }}" method="POST">
+                                                                    @csrf
+                                                                    <input type="email" class="newsletter-email" name="email" placeholder="Votre email" required="" />
+                                                                    <input class="newsletter-submit" type="submit" value="Souscrire " />
+                                                                    @if($errors->has('email'))
+                                                                    <small  style="color: white ! important" id="emailHelp" class="form-text">{{$errors->first('email')}}</small>
+                                                                    @endif
+                                                                </form>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -154,23 +57,6 @@
                                                                 </a>
                                                             </li>
 
-                                                            <li>
-                                                                <a href="https://plus.google.com">
-                                                                    <i class="fa fa-google-plus"></i>
-                                                                </a>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="https://www.linkedin.com">
-                                                                    <i class="fa fa-linkedin"></i>
-                                                                </a>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="https://www.pinterest.com/">
-                                                                    <i class="fa fa-pinterest-p"></i>
-                                                                </a>
-                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -300,7 +186,7 @@
                                                         <div class="title">
                                                             <h2>Localiser la boutique</h2>
                                                         </div>
-                                                        <a style="color: white" href="#" class="link-map">Localiser la boutique</a>
+                                                        <a style="color: white" target="_blank" href="https://www.google.com/maps/place/UVS+ENO+KEUR+MASSAR/@14.7910234,-17.3140769,14z/data=!4m5!3m4!1s0x0:0x8fa28f8668de1fcd!8m2!3d14.786991!4d-17.311934?hl=fr" class="link-map">Localiser la boutique</a>
                                                     </div>
                                                 </div>
                                             </div>

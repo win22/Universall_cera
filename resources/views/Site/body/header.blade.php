@@ -7,7 +7,7 @@
                 <div class="rows">
                     <!-- SIDEBAR TOP MENU -->
                     <div class="pull-left top1">
-                        <div style="color: white; font-family: 'Manjari Bold'; font-size: 18px" class="call-us"><span></span>Restez chez vous s'il vous plait</div>
+                        <div id="rester" style="color: white; font-family: 'Manjari Bold'; font-size: 18px" class="test call-us"><span></span>Restez chez vous s'il vous plait</div>
                     </div>
 
                     <div class="pull-right">
@@ -163,7 +163,7 @@
                     <div class="mid-header pull-right">
                         <div class="widget sw_top">
                                     <span class="stick-sr">
-                                        <p style="color: #ffd600 " aria-hidden="true"><span style="color: white"></span>Restez chez vous!</p>
+                                        <p id="rester" style="color: #ffffff " aria-hidden="true"><span style="color: white"></span>Restez chez vous!</p>
                                     </span>
                         </div>
                     </div>

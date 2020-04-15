@@ -5,7 +5,7 @@
         <div class="listings-title">
             <div class="container">
                 <div class="wrap-title">
-                    <h1>Tous les produit </h1>
+                    <h1>Résultat de votre recherche  </h1>
 
                     <div class="bread">
                         <div class="breadcrumbs theme-clearfix">
@@ -21,35 +21,6 @@
         <div class="container">
             <div class="row">
                 <div id="contents" class="content col-lg-9 col-md-8 col-sm-8" role="main">
-                    <div class="listing-top">
-                        <div class="widget-1 widget-first widget rev-slider-widget-2 widget_revslider">
-                            <div class="widget-inner">
-                                <!-- OWL SLIDER -->
-                                <div class="wpb_revslider_element wpb_content_element no-margin">
-                                    <div class="vc_column-inner ">
-                                        <div class="wpb_wrapper">
-                                            <div class="wpb_revslider_element wpb_content_element">
-                                                <div id="main-slider" class="fullwidthbanner-container" style="position:relative; width:100%; height:auto; margin-top:0px; margin-bottom:0px">
-                                                    <div class="module slideshow no-margin">
-                                                        <div class="item">
-                                                            <a href="simple_product.html"><img style="height: 300px" src="{{ asset('site/images/1903/sli5.jpg') }}" alt="slider1" class="img-responsive" ></a>
-                                                        </div>
-                                                        <div class="item">
-                                                            <a href="simple_product.html"><img style="height: 300px" src="{{ asset('site/images/1903/sl2.jpg') }}" alt="slider2" class="img-responsive" ></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="loadeding"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- OWL LIGHT SLIDER -->
-                            </div>
-                        </div>
-
-
-                    </div>
 
                     <div class="vc_row vc_row-fluid margin-bottom-30">
                         <div class="vc_column_container vc_col-sm-12">
@@ -78,7 +49,7 @@
                                 <div class="clear"></div>
 
                                 <ul class="products-loop row grid clearfix">
-                                    @foreach($produit_all as $all)
+                                    @foreach($product_category as $all)
                                     <li class="item col-lg-3 col-md-3 col-sm-6 col-xs-6 post-255 product type-product status-publish has-post-thumbnail product_cat-electronics product_cat-home-appliances product_cat-vacuum-cleaner product_brand-apoteket first instock sale featured shipping-taxable purchasable product-type-simple">
                                         <div class="products-entry item-wrap clearfix">
                                             <div class="item-detail">
@@ -93,14 +64,14 @@
 
                                                     <!-- add to cart, wishlist, compare -->
                                                     <div class="item-bottom clearfix">
-                                                        <a style="background-color: #ffaa00; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $all->id ) }}">Voir les détails</a>
+                                                        <a class="btn btn-warning" href="{{ route('details', $all->id) }}">Voir les détails</a>
                                                         <div class="clear"></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="item-content products-content">
                                                     <div class="reviews-content">
-                                                       <span>Produit de type céramique</span>
+                                                        <span>Produit de type céramique</span>
                                                     </div>
 
                                                     <h4><a href="{{ route('details', $all->id) }}" title="Cleaner with bag">{{ $all->model }}</a></h4>
@@ -108,8 +79,8 @@
                                                     <span style="color: tomato" class="item-price">
                                                         <span   class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{{ $all->prix }}</span> FCFA <ins></span>
 
+                                                </div>
                                             </div>
-                                        </div>
                                     </li>
                                     @endforeach
                                 </ul>
@@ -123,11 +94,11 @@
                                             <a href="javascript:void(0)" class="list-view" title="List view"><span>List view</span></a>
                                         </div>
                                     </div>
-
-
-
+                                    @if($nb_count <= 0)
+                                    <p style="color: tomato">Aucun produits trouvé</p>
+                                    @endif
                                     <nav class="woocommerce-pagination pull-right">
-                                        <span class="note"> {{ $produit_all->links() }} </span>
+                                        <span class="note"> {{ $product_category->links() }} </span>
                                     </nav>
                                 </div>
                             </div>
@@ -141,6 +112,7 @@
                             <div class="block-title-widget">
                                 <h2><span>Categories</span></h2>
                             </div>
+
                             <ul class="product-categories">
                                 <li class="cat-item"><a href="{{ route('category', 3) }}">Sol</a> </li>
                                 <li class="cat-item"><a href="{{ route('category', 7) }}">Faiences</a> </li>

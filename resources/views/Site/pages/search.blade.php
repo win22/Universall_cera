@@ -64,7 +64,7 @@
 
                                                     <!-- add to cart, wishlist, compare -->
                                                     <div class="item-bottom clearfix">
-                                                        <a class="btn btn-warning" href="{{ route('details', $all->id) }}">Voir les détails</a>
+                                                        <a style="background-color: #ffaa00; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $all->id ) }}">Voir les détails</a>
                                                         <div class="clear"></div>
                                                     </div>
                                                 </div>
@@ -95,7 +95,9 @@
                                         </div>
                                     </div>
 
-
+                                    @if($nb_count <= 0)
+                                    <p style="color: tomato">Aucun produits trouvé</p>
+                                    @endif
 
                                     <nav class="woocommerce-pagination pull-right">
                                         <span class="note"> {{ $result->links() }} </span>
@@ -114,14 +116,14 @@
                             </div>
 
                             <ul class="product-categories">
-                                <li class="cat-item"><a href="shop.html">Sol</a> <span class="count">(2)</span></li>
-                                <li class="cat-item"><a href="shop.html">Faiences</a> <span class="count">(1)</span></li>
-                                <li class="cat-item"><a href="shop.html">Salle de bain</a> <span class="count">(2)</span></li>
-                                <li class="cat-item"><a href="shop.html">Sanitaire</a> <span class="count">(0)</span></li>
-                                <li class="cat-item"><a href="shop.html">Lavabo</a> <span class="count">(6)</span></li>
-                                <li class="cat-item"><a href="shop.html">Décoration</a> <span class="count">(1)</span></li>
-                                <li class="cat-item"><a href="shop.html">Faiences cuisines</a> <span class="count">(2)</span></li>
-                                <li class="cat-item"><a href="shop.html">Faiences Salle de bain</a> <span class="count">(3)</span></li>
+                                <li class="cat-item"><a href="{{ route('category', 3) }}">Sol</a> </li>
+                                <li class="cat-item"><a href="{{ route('category', 7) }}">Faiences</a> </li>
+                                <li class="cat-item"><a href="{{ route('category', 10) }}">Salle de bain</a> </li>
+                                <li class="cat-item"><a href="{{ route('category', 12) }}">Sanitaire</a> </li>
+                                <li class="cat-item"><a href="{{ route('category', 14) }}">Lavabo</a> </li>
+                                <li class="cat-item"><a href="{{ route('category', 11) }}">Décoration</a> </li>
+                                <li class="cat-item"><a href="{{ route('category', 9) }}">Faiences cuisines</a> </li>
+                                <li class="cat-item"><a href="{{ route('category', 10) }}">Faiences Salle de bain</a></li>
                             </ul>
                         </div>
                     </div>
@@ -155,7 +157,7 @@
 
                                             <h4><a href="{{ route('details', $solc->id) }}" title="corned beef enim">{{ $solc->model }}</a></h4>
 
-                                            <div style="color: orange" class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{{ $solc->prix }} FCFA</span></div>
+                                            <div style="color: tomato" class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{{ $solc->prix }} FCFA</span></div>
                                         </div>
                                     </li>
                                     @endforeach
@@ -178,4 +180,6 @@
         </div>
     </div>
 </div>
+
+
 @endsection

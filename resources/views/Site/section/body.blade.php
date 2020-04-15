@@ -182,17 +182,17 @@
 
                                                     <div class="box-title-right clearfix">
                                                         <div class="view-all pull-left">
-                                                            <a href="shop_right_sidebar.html">
+                                                            <a href="{{ route('shop') }}">
                                                                 Voir tout<i class="fa fa-caret-right"></i>
                                                             </a>
                                                         </div>
 
                                                         <div class="childcat-content pull-right" id="child_sw_woo_slider_02">
                                                             <ul>
-                                                                <li><a href="shop_right_sidebar.html">Lavabos</a></li>
-                                                                <li><a href="shop_right_sidebar.html">Sanitaires</a></li>
-                                                                <li><a href="shop_right_sidebar.html">Fainces</a></li>
-                                                                <li><a href="shop_right_sidebar.html">Sol</a></li>
+                                                                <li><a href="{{ route('category', 14) }}">Lavabos</a></li>
+                                                                <li><a href="{{ route('category', 12) }}">Sanitaires</a></li>
+                                                                <li><a href="{{ route('category', 7) }}">Faiences</a></li>
+                                                                <li><a href="{{ route('category', 3) }}">Sol</a></li>
 
                                                             </ul>
                                                         </div>
@@ -219,32 +219,7 @@
 
                                                                             <!-- add to cart, wishlist, compare -->
                                                                             <div class="item-bottom clearfix">
-                                                                                <a rel="nofollow" href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart" title="Add to Cart">Add to cart</a>
-
-                                                                                <a href="javascript:void(0)" class="compare button" rel="nofollow" title="Add to Compare">Compare</a>
-
-                                                                                <div class="yith-wcwl-add-to-wishlist ">
-                                                                                    <div class="yith-wcwl-add-button show" style="display:block">
-                                                                                        <a href="wishlist.html" rel="nofollow" class="add_to_wishlist">Add to Wishlist</a>
-                                                                                        <img src="images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" />
-                                                                                    </div>
-
-                                                                                    <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
-                                                                                        <span class="feedback">Product added!</span>
-                                                                                        <a href="#" rel="nofollow">Browse Wishlist</a>
-                                                                                    </div>
-
-                                                                                    <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
-                                                                                        <span class="feedback">The product is already in the wishlist!</span>
-                                                                                        <a href="#" rel="nofollow">Browse Wishlist</a>
-                                                                                    </div>
-
-                                                                                    <div style="clear:both"></div>
-                                                                                    <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                                                </div>
-
-                                                                                <div class="clear"></div>
-                                                                                <a href="ajax/fancybox/example.html" data-fancybox-type="ajax" class="sm_quickview_handler-list fancybox fancybox.ajax">Quick View </a>
+                                                                                <a style="background-color: #ffaa00; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $all->id ) }}">Voir les détails</a>
                                                                             </div>
                                                                         </div>
                                                                         <span>Produit de type ceramique</span>
