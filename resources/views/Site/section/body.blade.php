@@ -28,8 +28,8 @@
                                         <div class="wpb_wrapper">
                                             <div id="_sw_countdown_01" class="sw-woo-container-slider responsive-slider countdown-slider countdown-slider2" data-lg="5" data-md="4" data-sm="2" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false" data-circle="false">
                                                 <div class="resp-slider-container">
-                                                    <div class="box-title clearfix">
-                                                        <h3>Meilleurs Produits</h3>
+                                                    <div  class="box-title clearfix">
+                                                        <h3 style="background-color: #00afff;">Meilleurs Produits</h3>
                                                         <a href="{{ route('shop') }}">voir tout</a>
                                                     </div>
 
@@ -58,18 +58,18 @@
 
                                                                         <div class="product-countdown" data-date="1519776000" data-price="$250" data-starttime="1483747200" data-cdtime="1519776000" data-id="product_sw_countdown_02"></div>
 
-                                                                        <span >Produit de type céramique</span>
+
 
                                                                         <!-- Price -->
-                                                                        <div style="padding-top: 15px; color: tomato" class="item-price">
-                                                                            <ins>
+                                                                        <div style="padding-top: 10px!important;" class="item-price">
+                                                                            <small style="padding-top: 5px!important;" >Produit de type céramique</small><br>
+                                                                            <ins  style="color: tomato ! important; padding-top: 5px!important;">
                                                                                 {{ $sol->prix }} FCFA
+                                                                            </ins><br>
+                                                                            <ins>
+                                                                                <a style="color: #0b85ea" href="{{ route('details', $sol->id ) }}" title="veniam dolore">{{ $sol->model }} </a>
                                                                             </ins>
                                                                         </div>
-                                                                        <h4>
-                                                                            <a href="{{ route('details', $sol->id ) }}" title="veniam dolore">{{ $sol->model }} </a>
-                                                                        </h4>
-
                                                                         <div class="sale-off">new</div>
                                                                     </div>
 
@@ -92,7 +92,7 @@
                                             <div id="_sw_countdown_01" class="sw-woo-container-slider responsive-slider countdown-slider countdown-slider2" data-lg="5" data-md="4" data-sm="2" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false" data-circle="false">
                                                 <div class="resp-slider-container">
                                                     <div class="box-title clearfix">
-                                                        <h3>Salle de bains</h3>
+                                                        <h3 style="background-color: #00afff;">Salle de bains</h3>
                                                         <a href="#">voir tout</a>
                                                     </div>
 
@@ -121,18 +121,16 @@
 
                                                                         <div class="product-countdown" data-date="1519776000" data-price="$250" data-starttime="1483747200" data-cdtime="1519776000" data-id="product_sw_countdown_02"></div>
 
-                                                                        <span >Produit de type céramique</span>
-
                                                                         <!-- Price -->
-                                                                        <div style="padding-top: 15px; color: tomato" class="item-price">
-                                                                            <ins>
+                                                                        <div style="padding-top: 10px!important;" class="item-price">
+                                                                            <small style="padding-top: 5px!important;" >Produit de type céramique</small><br>
+                                                                            <ins  style="color: tomato ! important; padding-top: 5px!important;">
                                                                                 {{ $lav_tend->prix }} FCFA
+                                                                            </ins><br>
+                                                                            <ins>
+                                                                                <a style="color: #0b85ea" href="{{ route('details', $lav_tend->id ) }}" title="veniam dolore">{{ $lav_tend->model }} </a>
                                                                             </ins>
                                                                         </div>
-                                                                        <h4>
-                                                                            <a href="{{ route('details', $lav_tend->id ) }}" title="veniam dolore">{{ $lav_tend->model }} </a>
-                                                                        </h4>
-
                                                                         <div class="sale-off">new</div>
                                                                     </div>
 
@@ -222,18 +220,15 @@
                                                                                 <a style="background-color: #ffaa00; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $all->id ) }}">Voir les détails</a>
                                                                             </div>
                                                                         </div>
-                                                                        <span>Produit de type ceramique</span>
-                                                                        <h4>
-                                                                            <a href="{{ route('details', $all->id ) }}" title="veniam dolore">{{ $all->model }}</a>
-                                                                        </h4>
-
-                                                                        <!-- Price -->
-                                                                        <div class="item-price">
-                                                                            <ins style="color: tomato">
-                                                                               {{ $all->prix }} FCFA
+                                                                        <div style="padding-top: 10px!important;" class="item-price">
+                                                                            <small style="padding-top: 5px!important;" >Produit de type céramique</small><br>
+                                                                            <ins  style="color: tomato ! important; padding-top: 5px!important;">
+                                                                                {{ $all->prix }} FCFA
+                                                                            </ins><br>
+                                                                            <ins>
+                                                                                <a style="color: #0b85ea" href="{{ route('details', $all->id ) }}" title="veniam dolore">{{ $all->model }} </a>
                                                                             </ins>
                                                                         </div>
-
                                                                         <div class="sale-off">New</div>
                                                                     </div>
 

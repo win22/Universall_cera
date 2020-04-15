@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="" id="rtl" />
     <link rel="stylesheet" href="{{ asset('site/css/app-responsive.css') }}" />
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body>

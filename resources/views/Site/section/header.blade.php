@@ -342,13 +342,13 @@
                                                                             <div id="main-slider" class="fullwidthbanner-container" style="position:relative; width:800px;  !important; margin-top:0px; margin-bottom:0px">
                                                                                 <div class="module slideshow no-margin">
                                                                                     <div class="item">
-                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/sli5.jpg') }} " alt="slider1" class="img-responsive" style="height: 530px"></a>
+                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/s2.jpeg') }} " alt="slider1" class="img-responsive" style="height: 530px"></a>
                                                                                     </div>
                                                                                     <div class="item">
-                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/sl1.jpg') }}" alt="slider2" class="img-responsive" style="height: 530px"></a>
+                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/s1.jpeg') }}" alt="slider2" class="img-responsive" style="height: 530px"></a>
                                                                                     </div>
                                                                                     <div class="item">
-                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/sl2.jpg') }}" alt="slider3" class="img-responsive" style="height: 530px"></a>
+                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/s4.jpeg') }}" alt="slider3" class="img-responsive" style="height: 530px"></a>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="loadeding"></div>

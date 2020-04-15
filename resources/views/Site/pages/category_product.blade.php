@@ -5,7 +5,7 @@
         <div class="listings-title">
             <div class="container">
                 <div class="wrap-title">
-                    <h1>Résultat de votre recherche  </h1>
+                    <h1>Produit de type {{ $category->name }}  </h1>
 
                     <div class="bread">
                         <div class="breadcrumbs theme-clearfix">
@@ -64,7 +64,7 @@
 
                                                     <!-- add to cart, wishlist, compare -->
                                                     <div class="item-bottom clearfix">
-                                                        <a class="btn btn-warning" href="{{ route('details', $all->id) }}">Voir les détails</a>
+                                                        <a style="background-color: tomato; color: white" class="btn" href="{{ route('details', $all->id) }}">Voir les détails</a>
                                                         <div class="clear"></div>
                                                     </div>
                                                 </div>
@@ -153,9 +153,9 @@
                                                 </div>
                                             </div>
 
-                                            <h4><a href="{{ route('details', $solc->id) }}" title="corned beef enim">{{ $solc->model }}</a></h4>
+                                            <h4><a style="color: #0b85ea" href="{{ route('details', $solc->id) }}" title="corned beef enim">{{ $solc->model }}</a></h4>
 
-                                            <div style="color: orange" class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{{ $solc->prix }} FCFA</span></div>
+                                            <div style="color: tomato" class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{{ $solc->prix }} FCFA</span></div>
                                         </div>
                                     </li>
                                     @endforeach
@@ -168,7 +168,7 @@
                         <div class="widget-inner">
                             <div class="textwidget">
                                 <div class="banner-sidebar">
-                                    <img src="{{ asset('site/images/1903/banner-detail.jpg') }}" title="banner" alt="banner">
+                                    <img src="{{ asset('site/images/1903/ban3.jpg') }}" title="banner" alt="banner">
                                 </div>
                             </div>
                         </div>

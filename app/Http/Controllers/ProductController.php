@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorie;
 use App\Models\Message;
 use App\Models\Produit;
 use Illuminate\Http\Request;
@@ -68,6 +69,10 @@ class ProductController extends Controller
             ->orWhere('parent_id', $id)
             ->inRandomOrder()
             ->paginate(8);
+
+        $category =  Categorie::where('id' , $id)
+            ->orWhere('parent_id', $id)
+            ->first();
         $nb_count = $product_category->count();
         $sol_footer = Produit::where('categorie_id', 3)
             ->where('status', 1)
@@ -78,6 +83,7 @@ class ProductController extends Controller
                 'product_category' => $product_category,
                 'nb_count' => $nb_count,
                 'sol_footer' => $sol_footer,
+                'category' => $category,
 
             ]
         );

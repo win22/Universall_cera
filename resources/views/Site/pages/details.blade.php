@@ -149,7 +149,7 @@
                                                                 <div class="woocommerce-variation single_variation"></div>
 
                                                                 <div class="woocommerce-variation-add-to-cart variations_button">
-                                                                    <a href="externalaffiliate_product.html" data-toggle="modal" data-target="#exampleModal"
+                                                                    <a  href="externalaffiliate_product.html" data-toggle="modal" data-target="#exampleModal"
                                                                        class="single_add_to_cart_button button alt external">Commander</a>
                                                                 </div><br/>
 
@@ -188,7 +188,7 @@
                                         <div class="tabbable">
                                             <ul class="nav nav-tabs">
                                                 <li class="description_tab active">
-                                                    <a href="#tab-description" data-toggle="tab">Description</a>
+                                                    <a href="#tab-description" style="background-color: #00afff; data-toggle="tab">Description</a>
                                                 </li>
 
                                             </ul>
@@ -427,6 +427,23 @@
                             </select>
                             @if($errors->has('quantite'))
                             <small id="emailHelp" class="form-text text-danger">{{$errors->first('quantite')}}</small>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 offset-md-4">
+                            <div class="g-recaptcha" data-sitekey="{{ env('CAPTCHA_KEY') }}"></div>
+                            @if($errors->has('g-recaptcha-response'))
+                            <span>
+                <strong style="color: red">{{ $errors->first('g-recaptcha-response')}}</strong>
+               </span>
+                            @endif
+                            <p hidden class="alert ">{{ $message = Session::get('message')}}</p>
+                            <br/>
+                            @if($message)
+                            <p style="color: #1a741a; font-family: 'Manjari Regular'" class="data-notify=" message"> {{$message }} <br/>
+                            </p>
+                            {{ Session::put('message',NULL) }}
                             @endif
                         </div>
                     </div>

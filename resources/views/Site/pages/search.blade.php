@@ -170,7 +170,7 @@
                         <div class="widget-inner">
                             <div class="textwidget">
                                 <div class="banner-sidebar">
-                                    <img src="{{ asset('site/images/1903/banner-detail.jpg') }}" title="banner" alt="banner">
+                                    <img src="{{ asset('site/images/1903/ban3.jpg') }}" title="banner" alt="banner">
                                 </div>
                             </div>
                         </div>

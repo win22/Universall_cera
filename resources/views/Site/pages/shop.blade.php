@@ -22,49 +22,24 @@
             <div class="row">
                 <div id="contents" class="content col-lg-9 col-md-8 col-sm-8" role="main">
                     <div class="listing-top">
-                        <div class="widget-1 widget-first widget rev-slider-widget-2 widget_revslider">
-                            <div class="widget-inner">
-                                <!-- OWL SLIDER -->
-                                <div class="wpb_revslider_element wpb_content_element no-margin">
-                                    <div class="vc_column-inner ">
-                                        <div class="wpb_wrapper">
-                                            <div class="wpb_revslider_element wpb_content_element">
-                                                <div id="main-slider" class="fullwidthbanner-container" style="position:relative; width:100%; height:auto; margin-top:0px; margin-bottom:0px">
-                                                    <div class="module slideshow no-margin">
-                                                        <div class="item">
-                                                            <a href="simple_product.html"><img style="height: 300px" src="{{ asset('site/images/1903/sli5.jpg') }}" alt="slider1" class="img-responsive" ></a>
-                                                        </div>
-                                                        <div class="item">
-                                                            <a href="simple_product.html"><img style="height: 300px" src="{{ asset('site/images/1903/sl2.jpg') }}" alt="slider2" class="img-responsive" ></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="loadeding"></div>
-                                                </div>
-                                            </div>
+                        <div class="vc_row vc_row-fluid margin-bottom-30">
+                            <div class="vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_single_image wpb_content_element vc_align_center banner-none">
+                                            <figure class="wpb_wrapper vc_figure">
+                                                <a href="#" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
+                                                    <img class="vc_single_image-img " src="{{ asset('site/images/1903/banniere.jpg') }}" width="1170" height="130" alt="banner3-4" title="banner3-4">
+                                                </a>
+                                            </figure>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- OWL LIGHT SLIDER -->
                             </div>
                         </div>
 
 
-                    </div>
 
-                    <div class="vc_row vc_row-fluid margin-bottom-30">
-                        <div class="vc_column_container vc_col-sm-12">
-                            <div class="vc_column-inner ">
-                                <div class="wpb_wrapper">
-                                    <div class="wpb_single_image wpb_content_element vc_align_center banner-none">
-                                        <figure class="wpb_wrapper vc_figure">
-                                            <a href="#" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
-                                                <img class="vc_single_image-img " src="{{ asset('site/images/1903/banniere.jpg') }}" width="1170" height="130" alt="banner3-4" title="banner3-4">
-                                            </a>
-                                        </figure>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div id="container">
@@ -93,7 +68,7 @@
 
                                                     <!-- add to cart, wishlist, compare -->
                                                     <div class="item-bottom clearfix">
-                                                        <a style="background-color: #ffaa00; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $all->id ) }}">Voir les détails</a>
+                                                        <a style="background-color: tomato; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $all->id ) }}">Voir les détails</a>
                                                         <div class="clear"></div>
                                                     </div>
                                                 </div>
@@ -103,7 +78,7 @@
                                                        <span>Produit de type céramique</span>
                                                     </div>
 
-                                                    <h4><a href="{{ route('details', $all->id) }}" title="Cleaner with bag">{{ $all->model }}</a></h4>
+                                                    <h4><a style="color: #0c83e2" href="{{ route('details', $all->id) }}" title="Cleaner with bag">{{ $all->model }}</a></h4>
 
                                                     <span style="color: tomato" class="item-price">
                                                         <span   class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{{ $all->prix }}</span> FCFA <ins></span>
@@ -183,7 +158,7 @@
 
                                             <h4><a href="{{ route('details', $solc->id) }}" title="corned beef enim">{{ $solc->model }}</a></h4>
 
-                                            <div style="color: orange" class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{{ $solc->prix }} FCFA</span></div>
+                                            <div style="color: tomato" class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{{ $solc->prix }} FCFA</span></div>
                                         </div>
                                     </li>
                                     @endforeach
@@ -196,7 +171,7 @@
                         <div class="widget-inner">
                             <div class="textwidget">
                                 <div class="banner-sidebar">
-                                    <img src="{{ asset('site/images/1903/banner-detail.jpg') }}" title="banner" alt="banner">
+                                    <img  src="{{ asset('site/images/1903/ban3.jpg') }}" title="banner" alt="banner">
                                 </div>
                             </div>
                         </div>
