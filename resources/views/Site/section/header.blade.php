@@ -162,7 +162,7 @@
                     <!-- /Primary navbar -->
                     <p hidden class="alert ">{{ $message = Session::get('message')}}</p>
                     @if($message)
-                    <div id="alert"  class="alert alert-success alert-with-icon small right ml-5">
+                    <div id="alert" style="padding-top: 10px!important; background-color: #ffaa00 ; color: white !important" class="alert  alert-with-icon small right ml-5">
                         <i class="fa fa-bell" data-notify="icon"></i>
                         </button>
                         <span class="text-center data-notify="message"> {{$message }} </span>

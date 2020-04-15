@@ -159,11 +159,19 @@
                         </nav>
                     </div>
                     <!-- /Primary navbar -->
-
+                    <p hidden class="alert ">{{ $message = Session::get('message')}}</p>
+                    @if($message)
+                    <div id="alert" style="padding-top: 10px!important; background-color: #ffaa00 ; color: white !important" class="alert  alert-with-icon small right ml-5">
+                        <i class="fa fa-bell" data-notify="icon"></i>
+                        </button>
+                        <span class="text-center data-notify="message"> {{$message }} </span>
+                    </div>
+                    {{ Session::put('message',NULL) }}
+                    @endif
                     <div class="mid-header pull-right">
                         <div class="widget sw_top">
                                     <span class="stick-sr">
-                                        <p id="rester" style="color: #ffffff " aria-hidden="true"><span style="color: white"></span>Restez chez vous!</p>
+                                        <h4 id="rester" style="color: #ffffff " aria-hidden="true"><span style="color: white"></span>Restez chez vous!</h4>
                                     </span>
                         </div>
                     </div>

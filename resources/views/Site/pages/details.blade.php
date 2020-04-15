@@ -148,16 +148,21 @@
                                                             <div class="single_variation_wrap">
                                                                 <div class="woocommerce-variation single_variation"></div>
 
-                                                                <div
-                                                                    class="woocommerce-variation-add-to-cart variations_button">
+                                                                <div class="woocommerce-variation-add-to-cart variations_button">
                                                                     <a href="externalaffiliate_product.html" data-toggle="modal" data-target="#exampleModal"
                                                                        class="single_add_to_cart_button button alt external">Commander</a>
-                                                                </div>
+                                                                </div><br/>
 
                                                             </div>
+
                                                         </div>
                                                     </form>
-
+                                                    @if($errors->has('name') || $errors->has('email') || $errors->has('adresse') || $errors->has('phone') || $errors->has('quantite') )
+                                                    <p  style="color: tomato ! important" id="emailHelp" class="form-text">
+                                                        Désolez,vous n'avez correctement remplit votre formulaire <br>
+                                                         Veuillez réessayer s'il vous plait.
+                                                    </p>
+                                                    @endif
                                                     <div class="social-share">
                                                         <div class="title-share">Retrouvez se produit sur </div>
                                                         <div class="wrap-content">
@@ -344,12 +349,12 @@
 
             </div>
             <div class="modal-body">
-                <form enctype="multipart/form-data" action="/save_admin" method="post">
+                <form enctype="multipart/form-data" action="{{ route('comvalide')}}" method="post">
                     @csrf
                     <div class="row">
                         <div class="form-group col-md-6">
                             <h6 class="">Nom <span class="text-orange">*</span></h6>
-                            <input required type="text" name="name" class="form-control" placeholder="Saisir ici...">
+                            <input value="{{ old('name') }}" required type="text" name="name" class="form-control" placeholder="Saisir ici...">
 
                             @if($errors->has('name'))
                             <small id="emailHelp" class="form-text text-danger">{{$errors->first('name')}}</small>
@@ -357,7 +362,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <h6 class="">Adresse e-mail <span class="text-orange">*</span></h6>
-                            <input required type="email" name="email" class="form-control" placeholder="Saisir ici...">
+                            <input required value="{{ old('email') }}"  type="email" name="email" class="form-control" placeholder="Saisir ici...">
 
                             @if($errors->has('email'))
                             <small id="emailHelp" class="form-text text-danger">{{$errors->first('email')}}</small>
@@ -367,7 +372,7 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <h6 class="">Adresse <span class="text-orange">*</span></h6>
-                            <input required type="text" name="adresse" class="form-control"
+                            <input value="{{ old('adresse') }}"  required type="text" name="adresse" class="form-control"
                                    placeholder="Saisir ici...">
 
                             @if($errors->has('adresse'))
@@ -376,7 +381,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <h6 class="">Phonne <span class="text-orange">*</span></h6>
-                            <input required type="text" name="phone" class="form-control"
+                            <input value="{{ old('phone') }}"  required type="text" name="phone" class="form-control"
                                    placeholder="Saisir ici...">
 
                             @if($errors->has('phone'))
@@ -420,8 +425,8 @@
                                 <option value="29">29</option>
                                 <option value="30">30</option>
                             </select>
-                            @if($errors->has('role'))
-                            <small id="emailHelp" class="form-text text-danger">{{$errors->first('role')}}</small>
+                            @if($errors->has('quantite'))
+                            <small id="emailHelp" class="form-text text-danger">{{$errors->first('quantite')}}</small>
                             @endif
                         </div>
                     </div>

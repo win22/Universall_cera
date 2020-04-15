@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('site/icons/apple-touch-icon-114-precomposed.png') }}" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('site/icons/apple-touch-icon-72-precomposed.png') }}" />
     <link rel="apple-touch-icon-precomposed" href="{{ asset('site/icons/apple-touch-icon-57-precomposed.png') }}" />
-    <link rel="shortcut icon" href="{{ asset('site/icons/favicon.png') }}" />
+    <link rel="shortcut icon" href="{{ asset('site/icons/logoucs.jpg') }}" />
 
     <!-- GOOGLE WEB FONTS -->
     <link rel="stylesheet" href="{{ asset('site/css/font-awesome.min.css') }}">
