@@ -91,3 +91,6 @@ a[data-theme], a[data-advanced] {
 #rester{
     transition: color 1s;
 }
+.yel2{
+    color: #ffaa00 ! important;
+}

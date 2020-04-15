@@ -131,14 +131,14 @@
 
                                     </li>
 
-                                    <li class="{{ request()->is('/shop')? 'active' : '' }}  menu-about-us etrostore-menu-custom level1">
+                                    <li class="{{ request()->is('shop')? 'active' : '' }}  menu-about-us etrostore-menu-custom level1">
                                         <a href="{{ route('shop') }}" class="item-link">
                                                     <span class="have-title">
                                                         <span class="menu-title">Magasin</span>
                                                     </span>
                                         </a>
                                     </li>
-                                    <li class=" {{ request()->is('/about')? 'active' : '' }} menu-about-us etrostore-menu-custom level1">
+                                    <li class=" {{ request()->is('about')? 'active' : '' }} menu-about-us etrostore-menu-custom level1">
                                         <a href="{{ route('about') }}" class="item-link">
                                                     <span class="have-title">
                                                         <span class="menu-title">A propos </span>
@@ -147,8 +147,10 @@
 
                                     </li>
 
-                                    <li class="menu-contact-us etrostore-menu-custom level1">
-                                        <a href="{{ route('contact') }}" class="item-link">
+                                    <li class="{{ request()->is('contact')? 'active' : '' }} menu-contact-us etrostore-menu-custom level1">
+                                        <a
+
+                                             href="{{ route('contact') }}" class="item-link">
                                                     <span class="have-title">
                                                         <span class="menu-title">Nous contacter</span>
                                                     </span>

@@ -151,7 +151,7 @@
                                     <li class="menu-contact-us etrostore-menu-custom level1">
                                         <a href="{{ route('contact') }}" class="item-link">
                                                     <span class="have-title">
-                                                        <span class="menu-title">Nous contacter</span>
+                                                          <span class=" {{ request()->is('contact')? 'yel2' : '' }} menu-title  ">Nous contacter</span>
                                                     </span>
                                         </a>
                                     </li>
