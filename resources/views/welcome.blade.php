@@ -162,7 +162,9 @@
         jQuery(function ($) {
             var alert = $('#alert');
             if(alert.length > 0){
+
                 alert.hide().slideDown(730).delay(3850).slideUp(600);
+                alert.classList.add('alert-visible')
             }
         })
     </script>

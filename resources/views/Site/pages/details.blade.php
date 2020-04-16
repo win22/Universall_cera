@@ -1,5 +1,6 @@
 @extends('Site.body.layout')
 @section('content')
+
 <div class="product-template-default single single-product woocommerce woocommerce-page">
     <div class="body-wrapper theme-clearfix">
         <div class="listings-title">
@@ -11,7 +12,15 @@
                 </div>
             </div>
         </div>
-
+        <p hidden class="alert ">{{ $message = Session::get('message')}}</p>
+        @if($message)
+        <div id="alert" style="padding-top: 10px!important; background-color: #ffaa00 ; color: white !important" class="alert  alert-with-icon small right ml-5">
+            <i class="fa fa-bell" data-notify="icon"></i>
+            </button>
+            <span class="text-center data-notify="message"> {{$message }} </span>
+        </div>
+        {{ Session::put('message',NULL) }}
+        @endif
         <div class="container">
             <div class="row">
                 <aside id="left" class="sidebar col-lg-3 col-md-4 col-sm-4">
@@ -157,9 +166,9 @@
 
                                                         </div>
                                                     </form>
-                                                    @if($errors->has('name') || $errors->has('email') || $errors->has('adresse') || $errors->has('phone') || $errors->has('quantite') )
+                                                    @if($errors->has('name') || $errors->has('email') || $errors->has('adresse') || $errors->has('phone') || $errors->has('quantite') || $errors->has('g-recaptcha-response') )
                                                     <p  style="color: tomato ! important" id="emailHelp" class="form-text">
-                                                        Désolez,vous n'avez correctement remplit votre formulaire <br>
+                                                      <i class="fa fa-warning"></i>  Désolez,vous n'avez pas correctement remplit votre formulaire <br>
                                                          Veuillez réessayer s'il vous plait.
                                                     </p>
                                                     @endif
@@ -428,6 +437,7 @@
                             @if($errors->has('quantite'))
                             <small id="emailHelp" class="form-text text-danger">{{$errors->first('quantite')}}</small>
                             @endif
+                            <input hidden type="text" name="product_id" value="{{ $produit->id }}">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -435,8 +445,8 @@
                             <div class="g-recaptcha" data-sitekey="{{ env('CAPTCHA_KEY') }}"></div>
                             @if($errors->has('g-recaptcha-response'))
                             <span>
-                <strong style="color: red">{{ $errors->first('g-recaptcha-response')}}</strong>
-               </span>
+                                 <strong style="color: red">{{ $errors->first('g-recaptcha-response')}}</strong>
+                           </span>
                             @endif
                             <p hidden class="alert ">{{ $message = Session::get('message')}}</p>
                             <br/>

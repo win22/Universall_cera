@@ -94,3 +94,10 @@ a[data-theme], a[data-advanced] {
 .yel2{
     color: #ffaa00 ! important;
 }
+
+
+.alert-visible
+{
+    opacity: 1;
+    transform: translateY(0);
+}

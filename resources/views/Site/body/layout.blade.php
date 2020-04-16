@@ -164,6 +164,7 @@
 <script>
     jQuery(function ($) {
         var alert = $('#alert');
+        alert.hide()
         if(alert.length > 0){
             alert.hide().slideDown(730).delay(3850).slideUp(600);
         }

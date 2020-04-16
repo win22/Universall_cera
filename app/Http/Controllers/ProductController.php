@@ -104,7 +104,7 @@ class ProductController extends Controller
 
         return back()
             ->with(
-                Session::put('message', 'Mercie pour abonnement !')
+                Session::put('message', 'Mercie pour votre abonnement !')
             );
     }
 
