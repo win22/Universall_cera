@@ -25,7 +25,7 @@ Route::post('/newsletter', 'ProductController@news')->name('newslet');
 Route::post('/commande', 'CommandeController@commandeV')->name('comvalide');
 Route::get('shop', 'ShopController@shop')->name('shop');
 Route::get('/product_by_category/{id}' , 'ProductController@product_category')->name('category');
-
+Route::get('/validation-commande/{token}' , 'CommandeController@validate_commande')->name('validate_prod');
 
 
 

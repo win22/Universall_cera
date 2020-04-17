@@ -119,7 +119,7 @@
 <script type="text/javascript" src="{{ asset('site/js/plugins.js') }}"></script>
 <script type="text/javascript" src="{{ asset('site/js/megamenu.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('site/js/main.min.js') }}"></script>
-
+<script src="{{ asset('backend/assets/dist/js/app.js') }}"></script>
 <script type="text/javascript">
     var sticky_navigation_offset_top = $("#header .header-bottom").offset().top;
     var sticky_navigation = function(){

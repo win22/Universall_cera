@@ -1,13 +1,13 @@
 <div class="page home-style1">
-    <header id="header" class="header header-style1"  >
+    <header id="header" class="header header-style1 "  >
 
         <!--        premier ligne-->
-        <div style="background-color: #0b85ea" class="header-top">
+        <div style="background-color: #0b85ea" class="header-top ">
             <div class="container">
                 <div class="rows">
                     <!-- SIDEBAR TOP MENU -->
-                    <div class="pull-left top1">
-                        <div id="rester" style="color: white; font-family: 'Manjari Bold'; font-size: 18px" class="test call-us"><span></span>Restez chez vous s'il vous plait</div>
+                    <div class="pull-left top1 reveal">
+                        <div id="rester" style="color: white; font-family: 'Manjari Bold'; font-size: 18px" class="test call-us "><span></span>Restez chez vous s'il vous plait</div>
                     </div>
 
                     <div class="pull-right">
@@ -45,7 +45,7 @@
                         <div class="widget sw_top-2 sw_top">
                             <div class="widget-inner">
                                 <div class="top-form top-search" >
-                                    <div class="topsearch-entry" >
+                                    <div class="reveal-2 topsearch-entry" >
                                         <form action="{{ route('search') }}" method="post">
                                             @csrf
                                             <input style="background-color: white; border-color: orange" type="text" value="" name="search" placeholder="Recherche...">
@@ -106,22 +106,22 @@
                                             <li class="{{ request()->is('/')? 'active' : '' }} menu-about-us">
                                                 <a class="item-link" href="/">Acceuil </a>
                                             </li>
-                                            <li class="{{ request()->is('/shop')? 'active' : '' }} menu-about-us">
+                                            <li class="{{ request()->is('shop')? 'active' : '' }} menu-about-us">
                                                 <a class="item-link" href="/shop">Magasin</a>
                                             </li>
 
-                                            <li class="{{ request()->is('/about')? 'active' : '' }} menu-contact-us">
+                                            <li class="{{ request()->is('about')? 'active' : '' }} menu-contact-us">
                                                 <a class="item-link" href="{{ route('about') }}">A propos de nous</a>
                                             </li>
 
-                                            <li class="{{ request()->is('/contact')? 'active' : '' }} menu-about-us">
+                                            <li class="{{ request()->is('contact')? 'active' : '' }} menu-about-us">
                                                 <a class="item-link" href="{{ route('contact') }}">Nous contacter</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
 
-                                <ul id="menu-primary-menu-1" class="nav nav-pills nav-mega etrostore-mega etrostore-menures">
+                                <ul id="menu-primary-menu-1" class="reveal-2 nav nav-pills nav-mega etrostore-mega etrostore-menures">
                                     <li class="{{ request()->is('/')? 'active' : '' }} menu-about-us etrostore-menu-custom level1">
                                         <a href="/" class="item-link">
                                                     <span class="have-title">

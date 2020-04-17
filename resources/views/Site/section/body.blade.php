@@ -6,7 +6,7 @@
                     <div class="entry-content">
                         <div   class="entry-summary">
 
-                            <div class="vc_row vc_row-fluid margin-bottom-30">
+                            <div class="vc_row vc_row-fluid margin-bottom-30 reveal-3">
                                 <div class="vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner ">
                                         <div class="wpb_wrapper">
@@ -22,7 +22,7 @@
                                 </div>
                             </div>
 
-                            <div class="vc_row vc_row-fluid margin-bottom-30">
+                            <div class="vc_row vc_row-fluid margin-bottom-30 reveal-3">
                                 <div class="vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner ">
                                         <div class="wpb_wrapper">
@@ -85,7 +85,7 @@
                                 </div>
                             </div>
 
-                            <div class="vc_row vc_row-fluid margin-bottom-30">
+                            <div class="vc_row vc_row-fluid margin-bottom-30 reveal-3">
                                 <div class="vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner ">
                                         <div class="wpb_wrapper">
@@ -146,7 +146,7 @@
                                 </div>
                             </div>
 
-                            <div class="vc_row vc_row-fluid margin-bottom-30">
+                            <div class="vc_row vc_row-fluid margin-bottom-30 reveal-3">
                                 <div class="vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner ">
                                         <div class="wpb_wrapper">
@@ -163,14 +163,14 @@
                             </div>
 
 
-                            <div class="vc_row vc_row-fluid margin-bottom-30">
+                            <div class="vc_row vc_row-fluid margin-bottom-30 reveal-3">
                                 <div class="vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner ">
                                         <div class="wpb_wrapper">
                                             <div id="slider_sw_woo_slider_widget_2" class="responsive-slider woo-slider-default sw-child-cat2" data-lg="5" data-md="4" data-sm="2" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false" data-circle="false">
                                                 <div class="child-top clearfix">
                                                     <div class="box-title pull-left">
-                                                        <h3>Autres produits</h3>
+                                                        <h3 style="background-color: #00afff;">Autres produits</h3>
                                                         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#child_sw_woo_slider_02" aria-expanded="false">
                                                             <span class="icon-bar"></span>
                                                             <span class="icon-bar"></span>
@@ -217,7 +217,7 @@
 
                                                                             <!-- add to cart, wishlist, compare -->
                                                                             <div class="item-bottom clearfix">
-                                                                                <a style="background-color: #ffaa00; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $all->id ) }}">Voir les détails</a>
+                                                                                <a style="background-color: tomato; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $all->id ) }}">Voir les détails</a>
                                                                             </div>
                                                                         </div>
                                                                         <div style="padding-top: 10px!important;" class="item-price">
@@ -247,7 +247,7 @@
 
                             </div>
 
-                            <div class="vc_row vc_row-fluid margin-bottom-60">
+                            <div class="vc_row vc_row-fluid margin-bottom-60 reveal-3">
                                 <div class="vc_column_container vc_col-sm-12 vc_col-lg-3 vc_col-md-6 vc_col-xs-12">
                                     <div class="vc_column-inner">
                                         <div class="wpb_wrapper">

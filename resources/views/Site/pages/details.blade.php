@@ -1,29 +1,29 @@
 @extends('Site.body.layout')
 @section('content')
-
+<p hidden class="alert ">{{ $message = Session::get('message')}}</p>
+@if($message)
+<div id="alert" style="padding-top: 10px!important; background-color: #ffaa00 ; color: white !important" class="alert  alert-with-icon small right ml-5">
+    <i class="fa fa-bell" data-notify="icon"></i>
+    </button>
+    <span class="text-center data-notify="message"> {{$message }} </span>
+</div>
+{{ Session::put('message',NULL) }}
+@endif
 <div class="product-template-default single single-product woocommerce woocommerce-page">
     <div class="body-wrapper theme-clearfix">
         <div class="listings-title">
             <div class="container">
                 <div  class="wrap-title">
-                    <h1 >Détail d'un produit</h1>
+                    <h1 class="reveal-2">Détail du {{ $produit->model }}</h1>
                     <div>
                     </div>
                 </div>
             </div>
         </div>
-        <p hidden class="alert ">{{ $message = Session::get('message')}}</p>
-        @if($message)
-        <div id="alert" style="padding-top: 10px!important; background-color: #ffaa00 ; color: white !important" class="alert  alert-with-icon small right ml-5">
-            <i class="fa fa-bell" data-notify="icon"></i>
-            </button>
-            <span class="text-center data-notify="message"> {{$message }} </span>
-        </div>
-        {{ Session::put('message',NULL) }}
-        @endif
+
         <div class="container">
             <div class="row">
-                <aside id="left" class="sidebar col-lg-3 col-md-4 col-sm-4">
+                <aside id="left" class="sidebar col-lg-3 col-md-4 col-sm-4 reveal-2">
                     <div class="widget-1 widget-first widget woocommerce_product_categories-3 woocommerce widget_product_categories">
                         <div  class="widget-inner">
                             <div   class="block-title-widget">
@@ -84,7 +84,7 @@
                     </div>
 
                 </aside>
-                <div id="contents" class="content col-lg-9 col-md-8 col-sm-8" role="main">
+                <div id="contents" class="content col-lg-9 col-md-8 col-sm-8 reveal-3" role="main">
                     <div id="contents-detail" class="content col-lg-12 col-md-12 col-sm-12" role="main">
                         <div id="container">
                             <div id="content" role="main">
@@ -438,6 +438,9 @@
                             <small id="emailHelp" class="form-text text-danger">{{$errors->first('quantite')}}</small>
                             @endif
                             <input hidden type="text" name="product_id" value="{{ $produit->id }}">
+                            <input hidden type="text" name="prix_product" value="{{ $produit->prix }}">
+                            <input hidden type="text" name="product_image" value="{{ $produit->image }}">
+                            <input hidden type="text" name="product_name" value="{{ $produit->model }}">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -456,6 +459,9 @@
                             {{ Session::put('message',NULL) }}
                             @endif
                         </div>
+                    </div>
+                    <div class="row">
+
                     </div>
 
                     <div class="modal-footer">

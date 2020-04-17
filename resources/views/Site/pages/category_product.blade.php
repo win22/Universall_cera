@@ -5,7 +5,7 @@
         <div class="listings-title">
             <div class="container">
                 <div class="wrap-title">
-                    <h1>Produit de type {{ $category->name }}  </h1>
+                    <h1 class="reveal-2">Produit de type {{ $category->name }}  </h1>
 
                     <div class="bread">
                         <div class="breadcrumbs theme-clearfix">
@@ -20,7 +20,7 @@
 
         <div class="container">
             <div class="row">
-                <div id="contents" class="content col-lg-9 col-md-8 col-sm-8" role="main">
+                <div id="contents" class="content col-lg-9 col-md-8 col-sm-8 reveal-3" role="main">
 
                     <div class="vc_row vc_row-fluid margin-bottom-30">
                         <div class="vc_column_container vc_col-sm-12">
@@ -106,7 +106,7 @@
                     </div>
                 </div>
 
-                <aside id="left" class="sidebar col-lg-3 col-md-4 col-sm-4">
+                <aside id="left" class="sidebar col-lg-3 col-md-4 col-sm-4 reveal-2">
                     <div class="widget-1 widget-first widget woocommerce_product_categories-3 woocommerce widget_product_categories">
                         <div class="widget-inner">
                             <div class="block-title-widget">

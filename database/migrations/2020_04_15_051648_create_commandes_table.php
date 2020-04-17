@@ -21,7 +21,10 @@ class CreateCommandesTable extends Migration
             $table->string('phone');
             $table->integer('quantite');
             $table->integer('product_id');
+            $table->string('num_commande');
             $table->string('status');
+            $table->integer('prix');
+            $table->string('token');
             $table->string('option');
             $table->timestamps();
         });

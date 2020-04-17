@@ -95,9 +95,38 @@ a[data-theme], a[data-advanced] {
     color: #ffaa00 ! important;
 }
 
-
+.alerte{
+    opacity: 0;
+}
 .alert-visible
 {
     opacity: 1;
     transform: translateY(0);
+}
+
+
+/*Pour l'annimation de transition'*/
+[class*="reveal"]
+{
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.reveal-visible
+{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0 , 0 , 1);
+}
+
+
+.reveal-2
+{
+    transition-delay: .2s;
+
+}
+.reveal-3
+{
+    transition-delay: .4s;
+
 }

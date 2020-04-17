@@ -117,6 +117,7 @@
 <script type="text/javascript" src="{{ asset('site/js/plugins.js') }}"></script>
 <script type="text/javascript" src="{{ asset('site/js/megamenu.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('site/js/main.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/dist/js/app.js') }}"></script>
 
 <script type="text/javascript">
     var sticky_navigation_offset_top = $("#header .header-bottom").offset().top;
@@ -162,9 +163,7 @@
         jQuery(function ($) {
             var alert = $('#alert');
             if(alert.length > 0){
-
-                alert.hide().slideDown(730).delay(3850).slideUp(600);
-                alert.classList.add('alert-visible')
+                alert.classList.remove('alerte').slideDown(730).delay(3850).slideUp(600);
             }
         })
     </script>

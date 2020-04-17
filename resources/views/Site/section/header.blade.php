@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="rows">
                     <!-- SIDEBAR TOP MENU -->
-                    <div class="pull-left top1">
+                    <div class="pull-left top1 reveal">
                         <div id="rester" style="color: white; font-family: 'Manjari Bold'; font-size: 18px" class="call-us"><span></span>Restez chez vous s'il vous plait</div>
                     </div>
 
@@ -42,11 +42,11 @@
                         </a>
                     </div>
 
-                    <div class="mid-header pull-right">
-                        <div class="widget sw_top-2 sw_top">
+                    <div class="mid-header pull-right ">
+                        <div class="widget sw_top-2 sw_top ">
                             <div class="widget-inner">
                                 <div class="top-form top-search" >
-                                    <div class="topsearch-entry" >
+                                    <div class="  reveal-2 topsearch-entry" >
                                         <form action="{{ route('search') }}" method="post">
                                             @csrf
                                             <input style="background-color: white; border-color: orange" type="text" value="" name="search" placeholder="Recherche...">
@@ -122,7 +122,7 @@
                                     </div>
                                 </div>
 
-                                <ul id="menu-primary-menu-1" class="nav nav-pills nav-mega etrostore-mega etrostore-menures">
+                                <ul id="menu-primary-menu-1" class="reveal-2 nav nav-pills nav-mega etrostore-mega etrostore-menures">
                                     <li class="{{ request()->is('/')? 'active' : '' }} menu-about-us etrostore-menu-custom level1">
                                         <a href="/" class="item-link">
                                                     <span class="have-title">
@@ -162,7 +162,7 @@
                     <!-- /Primary navbar -->
                     <p hidden class="alert ">{{ $message = Session::get('message')}}</p>
                     @if($message)
-                    <div id="alert" style="padding-top: 10px!important; background-color: #ffaa00 ; color: white !important" class="alert  alert-with-icon small right ml-5">
+                    <div id="alert" style="padding-top: 10px!important; background-color: #ffaa00 ; color: white !important" class="alert  alert-with-icon small right ml-5 ">
                         <i class="fa fa-bell" data-notify="icon"></i>
                         </button>
                         <span class="text-center data-notify="message"> {{$message }} </span>
@@ -195,7 +195,7 @@
                                                     <div class="vc_column-inner ">
                                                         <div class="wpb_wrapper">
                                                             <div class="vc_wp_custommenu wpb_content_element wrap-title">
-                                                                <div class="mega-left-title">
+                                                                <div class="reveal-2 mega-left-title">
                                                                     <strong>Categories</strong>
                                                                 </div>
 
@@ -208,9 +208,9 @@
                                                                             <span class="icon-bar"></span>
                                                                         </button>
 
-                                                                        <div id="ResMenuvertical_menu" class="collapse menu-responsive-wrapper">
+                                                                        <div id="ResMenuvertical_menu" class=" collapse menu-responsive-wrapper">
                                                                             <ul id="menu-vertical-menu" class="etrostore_resmenu">
-                                                                                <li class="menu-computers-laptops">
+                                                                                <li class="menu-computers-laptops  ">
                                                                                     <a class="item-link" href="{{ route('category', 3) }}">Sol</a>
                                                                                 </li>
                                                                                 <li class="menu-computers-laptops">
@@ -231,8 +231,8 @@
                                                                         </div>
                                                                     </div>
 
-                                                                    <ul id="menu-vertical-menu-1" class="nav vertical-megamenu etrostore-mega etrostore-menures">
-                                                                        <li class="menu-computers-laptops etrostore-menu-custom level1">
+                                                                    <ul id="menu-vertical-menu-1" class=" nav vertical-megamenu etrostore-mega etrostore-menures">
+                                                                        <li class="reveal-3 menu-computers-laptops etrostore-menu-custom level1">
                                                                             <a href="{{ route('category', 3) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#7ac143"></span>
@@ -242,7 +242,7 @@
                                                                             </a>
                                                                         </li>
 
-                                                                        <li class="menu-computers-laptops etrostore-menu-custom level1">
+                                                                        <li class=" reveal-3 menu-computers-laptops etrostore-menu-custom level1">
                                                                             <a href="{{ route('category', 7) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#f03442"></span>
@@ -250,7 +250,7 @@
                                                                                         </span>
                                                                             </a>
                                                                         </li>
-                                                                        <li class="menu-computers-laptops etrostore-menu-custom level1">
+                                                                        <li class="reveal-3 menu-computers-laptops etrostore-menu-custom level1">
                                                                             <a href="{{ route('category', 8) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#efc73a"></span>
@@ -259,7 +259,7 @@
                                                                                         </span>
                                                                             </a>
                                                                         </li>
-                                                                        <li class="menu-computers-laptops etrostore-menu-custom level1">
+                                                                        <li class="reveal-3 menu-computers-laptops etrostore-menu-custom level1">
                                                                             <a href="{{ route('category', 10) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#42b8d1"></span>
@@ -268,7 +268,7 @@
                                                                                         </span>
                                                                             </a>
                                                                         </li>
-                                                                        <li class="menu-computers-laptops etrostore-menu-custom level1">
+                                                                        <li class="reveal-3 menu-computers-laptops etrostore-menu-custom level1">
                                                                             <a href="{{ route('category', 12) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#7ac143"></span>
@@ -277,7 +277,7 @@
                                                                                         </span>
                                                                             </a>
                                                                         </li>
-                                                                        <li class="menu-computers-laptops etrostore-menu-custom level1">
+                                                                        <li class="reveal-3 menu-computers-laptops etrostore-menu-custom level1">
                                                                             <a href="{{ route('category', 14) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#42b8d1"></span>
@@ -286,7 +286,7 @@
                                                                                         </span>
                                                                             </a>
                                                                         </li>
-                                                                        <li class="menu-computers-laptops etrostore-menu-custom level1">
+                                                                        <li class="reveal-3 menu-computers-laptops etrostore-menu-custom level1">
                                                                             <a href="{{ route('category', 11) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#7ac143"></span>
@@ -295,7 +295,7 @@
                                                                                         </span>
                                                                             </a>
                                                                         </li>
-                                                                        <li class="menu-computers-laptops etrostore-menu-custom level1">
+                                                                        <li class="reveal-3 menu-computers-laptops etrostore-menu-custom level1">
                                                                             <a href="{{ route('category', 3) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#42b8d1"></span>
@@ -304,7 +304,7 @@
                                                                                         </span>
                                                                             </a>
                                                                         </li>
-                                                                        <li class="menu-computers-laptops etrostore-menu-custom level1">
+                                                                        <li class="reveal-3 menu-computers-laptops etrostore-menu-custom level1">
                                                                             <a href="{{ route('category', 9) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#13528c"></span>
@@ -314,7 +314,7 @@
                                                                             </a>
                                                                         </li>
 
-                                                                        <li class="menu-computers-laptops etrostore-menu-custom level1">
+                                                                        <li class="reveal-3 menu-computers-laptops etrostore-menu-custom level1">
                                                                             <a href="{{ route('category', 10) }}" class="item-link">
                                                                                         <span class="have-title">
                                                                                             <span class="menu-color" data-color="#13528c"></span>
@@ -367,7 +367,7 @@
                                                 <div class="wrap-banner vc_column_container vc_col-sm-2">
                                                     <div class="vc_column-inner ">
                                                         <div class="wpb_wrapper">
-                                                            <div class="wpb_single_image wpb_content_element vc_align_center ">
+                                                            <div class="reveal-3 wpb_single_image wpb_content_element vc_align_center ">
                                                                 <figure class="wpb_wrapper vc_figure">
                                                                     <a href="#" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
                                                                         <img class="vc_single_image-img" src="{{ asset('site/images/1903/ban2.jpg') }}" width="193" height="352" alt="banner1" title="banner1" />
@@ -375,7 +375,7 @@
                                                                 </figure>
                                                             </div>
 
-                                                            <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                            <div class="reveal-3 wpb_single_image wpb_content_element vc_align_center">
                                                                 <figure class="wpb_wrapper vc_figure">
                                                                     <a href="#" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
                                                                         <img class="vc_single_image-img" src="{{ asset('site/images/1903/ban3.jpg') }}" width="193" height="125" alt="banner2" title="banner2" />

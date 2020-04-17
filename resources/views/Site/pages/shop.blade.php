@@ -5,7 +5,7 @@
         <div class="listings-title">
             <div class="container">
                 <div class="wrap-title">
-                    <h1>Tous les produit </h1>
+                    <h1 class="reveal-2">Tous les produit </h1>
 
                     <div class="bread">
                         <div class="breadcrumbs theme-clearfix">
@@ -20,7 +20,7 @@
 
         <div class="container">
             <div class="row">
-                <div id="contents" class="content col-lg-9 col-md-8 col-sm-8" role="main">
+                <div id="contents" class="content col-lg-9 col-md-8 col-sm-8 reveal-3" role="main">
                     <div class="listing-top">
                         <div class="vc_row vc_row-fluid margin-bottom-30">
                             <div class="vc_column_container vc_col-sm-12">
@@ -28,8 +28,11 @@
                                     <div class="wpb_wrapper">
                                         <div class="wpb_single_image wpb_content_element vc_align_center banner-none">
                                             <figure class="wpb_wrapper vc_figure">
-                                                <a href="#" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
-                                                    <img class="vc_single_image-img " src="{{ asset('site/images/1903/banniere.jpg') }}" width="1170" height="130" alt="banner3-4" title="banner3-4">
+                                                <a href="#" target="_self"
+                                                   class="vc_single_image-wrapper vc_box_border_grey">
+                                                    <img class="vc_single_image-img "
+                                                         src="{{ asset('site/images/1903/banniere.jpg') }}" width="1170"
+                                                         height="130" alt="banner3-4" title="banner3-4">
                                                 </a>
                                             </figure>
                                         </div>
@@ -39,19 +42,13 @@
                         </div>
 
 
-
                     </div>
 
                     <div id="container">
                         <div id="content" role="main">
                             <!--  Shop Title -->
                             <div class="products-wrapper">
-
-
-
-
                                 <div class="clear"></div>
-
                                 <ul class="products-loop row grid clearfix">
                                     @foreach($produit_all as $all)
                                     <li class="item col-lg-3 col-md-3 col-sm-6 col-xs-6 post-255 product type-product status-publish has-post-thumbnail product_cat-electronics product_cat-home-appliances product_cat-vacuum-cleaner product_brand-apoteket first instock sale featured shipping-taxable purchasable product-type-simple">
@@ -60,31 +57,41 @@
                                                 <div class="item-img products-thumb">
                                                     <a href="{{ route('details', $all->id) }}">
                                                         <div class="product-thumb-hover">
-                                                            <img  style="width: 160px !important; height: 150px ! important"	width="300" height="100" src="{{ URL::to(asset($all->image)) }}" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""
-                                                                  srcset="{{ URL::to(asset($all->image)) }} 100w, {{ URL::to(asset($all->image)) }} 150w, {{ URL::to(asset($all->image)) }} 180w,{{ URL::to(asset($all->image)) }} 600w"
-                                                                  sizes="(max-width: 300px) 100vw, 300px" />
+                                                            <img
+                                                                style="width: 160px !important; height: 150px ! important"
+                                                                width="300" height="100"
+                                                                src="{{ URL::to(asset($all->image)) }}"
+                                                                class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                                                alt=""
+                                                                srcset="{{ URL::to(asset($all->image)) }} 100w, {{ URL::to(asset($all->image)) }} 150w, {{ URL::to(asset($all->image)) }} 180w,{{ URL::to(asset($all->image)) }} 600w"
+                                                                sizes="(max-width: 300px) 100vw, 300px"/>
                                                         </div>
                                                     </a>
 
                                                     <!-- add to cart, wishlist, compare -->
                                                     <div class="item-bottom clearfix">
-                                                        <a style="background-color: tomato; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $all->id ) }}">Voir les détails</a>
+                                                        <a style="background-color: tomato; color:white; padding-right: 10px"
+                                                           class="btn btn-sm" href="{{ route('details', $all->id ) }}">Voir
+                                                            les détails</a>
                                                         <div class="clear"></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="item-content products-content">
                                                     <div class="reviews-content">
-                                                       <span>Produit de type céramique</span>
+                                                        <span>Produit de type céramique</span>
                                                     </div>
 
-                                                    <h4><a style="color: #0c83e2" href="{{ route('details', $all->id) }}" title="Cleaner with bag">{{ $all->model }}</a></h4>
+                                                    <h4><a style="color: #0c83e2"
+                                                           href="{{ route('details', $all->id) }}"
+                                                           title="Cleaner with bag">{{ $all->model }}</a></h4>
 
                                                     <span style="color: tomato" class="item-price">
-                                                        <span   class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{{ $all->prix }}</span> FCFA <ins></span>
+                                                        <span class="woocommerce-Price-amount amount"><span
+                                                                class="woocommerce-Price-currencySymbol"></span>{{ $all->prix }}</span> FCFA <ins></span>
 
+                                                </div>
                                             </div>
-                                        </div>
                                     </li>
                                     @endforeach
                                 </ul>
@@ -94,11 +101,11 @@
                                 <div class="products-nav clearfix">
                                     <div class="view-mode-wrap pull-left clearfix">
                                         <div class="view-mode">
-                                            <a href="javascript:void(0)" class="grid-view active" title="Grid view"><span>Grid view</span></a>
+                                            <a href="javascript:void(0)" class="grid-view active"
+                                               title="Grid view"><span>Grid view</span></a>
                                             <a href="javascript:void(0)" class="list-view" title="List view"><span>List view</span></a>
                                         </div>
                                     </div>
-
 
 
                                     <nav class="woocommerce-pagination pull-right">
@@ -110,21 +117,23 @@
                     </div>
                 </div>
 
-                <aside id="left" class="sidebar col-lg-3 col-md-4 col-sm-4">
-                    <div class="widget-1 widget-first widget woocommerce_product_categories-3 woocommerce widget_product_categories">
+                <aside id="left" class="sidebar col-lg-3 col-md-4 col-sm-4 reveal-2">
+                    <div
+                        class="widget-1 widget-first widget woocommerce_product_categories-3 woocommerce widget_product_categories">
                         <div class="widget-inner">
                             <div class="block-title-widget">
                                 <h2><span>Categories</span></h2>
                             </div>
                             <ul class="product-categories">
-                                <li class="cat-item"><a href="{{ route('category', 3) }}">Sol</a> </li>
-                                <li class="cat-item"><a href="{{ route('category', 7) }}">Faiences</a> </li>
-                                <li class="cat-item"><a href="{{ route('category', 10) }}">Salle de bain</a> </li>
-                                <li class="cat-item"><a href="{{ route('category', 12) }}">Sanitaire</a> </li>
-                                <li class="cat-item"><a href="{{ route('category', 14) }}">Lavabo</a> </li>
-                                <li class="cat-item"><a href="{{ route('category', 11) }}">Décoration</a> </li>
-                                <li class="cat-item"><a href="{{ route('category', 9) }}">Faiences cuisines</a> </li>
-                                <li class="cat-item"><a href="{{ route('category', 10) }}">Faiences Salle de bain</a></li>
+                                <li class="cat-item"><a href="{{ route('category', 3) }}">Sol</a></li>
+                                <li class="cat-item"><a href="{{ route('category', 7) }}">Faiences</a></li>
+                                <li class="cat-item"><a href="{{ route('category', 10) }}">Salle de bain</a></li>
+                                <li class="cat-item"><a href="{{ route('category', 12) }}">Sanitaire</a></li>
+                                <li class="cat-item"><a href="{{ route('category', 14) }}">Lavabo</a></li>
+                                <li class="cat-item"><a href="{{ route('category', 11) }}">Décoration</a></li>
+                                <li class="cat-item"><a href="{{ route('category', 9) }}">Faiences cuisines</a></li>
+                                <li class="cat-item"><a href="{{ route('category', 10) }}">Faiences Salle de bain</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -142,9 +151,12 @@
                                     <li class="clearfix">
                                         <div class="item-img">
                                             <a href="{{ route('details', $solc->id) }}" title="corned beef enim">
-                                                <img style="width: 60px; height: 70px"	width="180" height="180" src="{{ URL::to(asset($solc->image)) }}" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt=""
+                                                <img style="width: 60px; height: 70px" width="180" height="180"
+                                                     src="{{ URL::to(asset($solc->image)) }}"
+                                                     class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image"
+                                                     alt=""
                                                      srcset="{{ URL::to(asset($solc->image)) }} 180w, {{ URL::to(asset($solc->image)) }} 150w, {{ URL::to(asset($solc->image)) }} 300w, {{ URL::to(asset($solc->image)) }} 600w"
-                                                     sizes="(max-width: 180px) 50vw, 180px" />
+                                                     sizes="(max-width: 180px) 50vw, 180px"/>
                                             </a>
                                         </div>
 
@@ -156,9 +168,13 @@
                                                 </div>
                                             </div>
 
-                                            <h4><a href="{{ route('details', $solc->id) }}" title="corned beef enim">{{ $solc->model }}</a></h4>
+                                            <h4><a href="{{ route('details', $solc->id) }}" title="corned beef enim">{{
+                                                    $solc->model }}</a></h4>
 
-                                            <div style="color: tomato" class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{{ $solc->prix }} FCFA</span></div>
+                                            <div style="color: tomato" class="price"><span
+                                                    class="woocommerce-Price-amount amount"><span
+                                                        class="woocommerce-Price-currencySymbol"></span>{{ $solc->prix }} FCFA</span>
+                                            </div>
                                         </div>
                                     </li>
                                     @endforeach
@@ -171,7 +187,7 @@
                         <div class="widget-inner">
                             <div class="textwidget">
                                 <div class="banner-sidebar">
-                                    <img  src="{{ asset('site/images/1903/ban3.jpg') }}" title="banner" alt="banner">
+                                    <img src="{{ asset('site/images/1903/ban3.jpg') }}" title="banner" alt="banner">
                                 </div>
                             </div>
                         </div>
