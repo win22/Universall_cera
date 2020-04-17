@@ -122,7 +122,7 @@
                         class="widget-1 widget-first widget woocommerce_product_categories-3 woocommerce widget_product_categories">
                         <div class="widget-inner">
                             <div class="block-title-widget">
-                                <h2><span>Categories</span></h2>
+                                <h2 style="background-color: #00afff; color: white"><span>Categories</span></h2>
                             </div>
                             <ul class="product-categories">
                                 <li class="cat-item"><a href="{{ route('category', 3) }}">Sol</a></li>
@@ -142,7 +142,7 @@
                     <div class="widget-5 widget etrostore_best_seller_product-3 etrostore_best_seller_product">
                         <div class="widget-inner">
                             <div class="block-title-widget">
-                                <h2><span>Les plus demandé</span></h2>
+                                <h2 style="background-color: #00afff; color: white"><span>Les plus demandé</span></h2>
                             </div>
 
                             <div id="best-seller-01" class="sw-best-seller-product">

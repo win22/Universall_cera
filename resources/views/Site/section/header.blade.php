@@ -49,30 +49,11 @@
                                     <div class="  reveal-2 topsearch-entry" >
                                         <form action="{{ route('search') }}" method="post">
                                             @csrf
-                                            <input style="background-color: white; border-color: orange" type="text" value="" name="search" placeholder="Recherche...">
-
-                                            <div style="background-color: white; border-color: orange" class="cat-wrapper">
-                                                <label style="background-color: white" class="label-search">
-                                                    <select style="background-color: white" name="search_category" class="s1_option">
-                                                        <option value="">Choisir</option>
-                                                        <option value="3">Sol</option>
-                                                        <option value="7">Faiences</option>
-                                                        <option value="8">Façades</option>
-                                                        <option value="14">Lavabo</option>
-                                                        <option value="12">Sanitaire</option>
-
-
-                                                    </select>
-                                                </label>
-                                            </div>
-
+                                            <input style="background-color: white; border-color: orange" type="text" value="" required name="search" placeholder="Recherche...">
 
                                             <button type="submit" title="Search" class="fa fa-search button-search-pro"></button><br>
                                             @if($errors->has('search'))
                                             <small style="padding-top: 15px !important; color: white" id="emailHelp" class="form-text">{{$errors->first('search')}}</small>
-                                            @endif
-                                            @if($errors->has('search_category'))
-                                            <small style="padding-top: 15px !important; color: white; padding-left: 40%" id="emailHelp" class="form-text">{{$errors->first('search_category')}}</small>
                                             @endif
                                         </form>
 
@@ -195,20 +176,20 @@
                                                     <div class="vc_column-inner ">
                                                         <div class="wpb_wrapper">
                                                             <div class="vc_wp_custommenu wpb_content_element wrap-title">
-                                                                <div class="reveal-2 mega-left-title">
-                                                                    <strong>Categories</strong>
+                                                                <div class="mega-left-title">
+                                                                    <strong class="reveal-2">Categories</strong>
                                                                 </div>
-
                                                                 <div class="wrapper_vertical_menu vertical_megamenu">
                                                                     <div class="resmenu-container">
                                                                         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#ResMenuvertical_menu">
-                                                                            <span class="sr-only">Categories</span>
+
+                                                                            <span class="sr-only reveal-2">Categories</span>
                                                                             <span class="icon-bar"></span>
                                                                             <span class="icon-bar"></span>
                                                                             <span class="icon-bar"></span>
                                                                         </button>
 
-                                                                        <div id="ResMenuvertical_menu" class=" collapse menu-responsive-wrapper">
+                                                                        <div id="ResMenuvertical_menu" class="collapse menu-responsive-wrapper">
                                                                             <ul id="menu-vertical-menu" class="etrostore_resmenu">
                                                                                 <li class="menu-computers-laptops  ">
                                                                                     <a class="item-link" href="{{ route('category', 3) }}">Sol</a>
@@ -221,7 +202,7 @@
                                                                                 </li>
 
                                                                                 <li class="menu-vacuum-cleaner">
-                                                                                    <a class="item-link" href="{{ route('category', 12) }}">Salle de bain</a>
+                                                                                    <a class="item-link" href="{{ route('category', 10) }}">Salle de bain</a>
                                                                                 </li>
                                                                                 <li class="menu-computers-laptops">
                                                                                     <a class="item-link" href="{{ route('category', 12) }}">Sanitaire</a>
@@ -342,13 +323,13 @@
                                                                             <div id="main-slider" class="fullwidthbanner-container" style="position:relative; width:800px;  !important; margin-top:0px; margin-bottom:0px">
                                                                                 <div class="module slideshow no-margin">
                                                                                     <div class="item">
-                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/s2.jpeg') }} " alt="slider1" class="img-responsive" style="height: 530px"></a>
+                                                                                        <a href="#"><img src="{{ asset('site/images/1903/s2.jpeg') }} " alt="slider1" class="img-responsive" style="width: 800px; height: 517px"></a>
                                                                                     </div>
                                                                                     <div class="item">
-                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/s1.jpeg') }}" alt="slider2" class="img-responsive" style="height: 530px"></a>
+                                                                                        <a href="#"><img src="{{ asset('site/images/1903/s1.jpeg') }}" alt="slider2" class="img-responsive" style="width: 800px; height: 517px"></a>
                                                                                     </div>
                                                                                     <div class="item">
-                                                                                        <a href="simple_product.html"><img src="{{ asset('site/images/1903/s4.jpeg') }}" alt="slider3" class="img-responsive" style="height: 530px"></a>
+                                                                                        <a href="#"><img src="{{ asset('site/images/1903/s4.jpeg') }}" alt="slider3" class="img-responsive" style="width: 800px; height: 517px"></a>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="loadeding"></div>
@@ -367,21 +348,15 @@
                                                 <div class="wrap-banner vc_column_container vc_col-sm-2">
                                                     <div class="vc_column-inner ">
                                                         <div class="wpb_wrapper">
+                                                            @foreach($lavabo_tendance_header as $lav_header)
                                                             <div class="reveal-3 wpb_single_image wpb_content_element vc_align_center ">
                                                                 <figure class="wpb_wrapper vc_figure">
-                                                                    <a href="#" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
-                                                                        <img class="vc_single_image-img" src="{{ asset('site/images/1903/ban2.jpg') }}" width="193" height="352" alt="banner1" title="banner1" />
+                                                                    <a href="{{ route('details', $lav_header->id) }}" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
+                                                                        <img style="width: 200px; height: 257px" class="vc_single_image-img" src="{{ URL::to(asset($lav_header->image)) }}"  alt="banner1" title="banner1" />
                                                                     </a>
                                                                 </figure>
                                                             </div>
-
-                                                            <div class="reveal-3 wpb_single_image wpb_content_element vc_align_center">
-                                                                <figure class="wpb_wrapper vc_figure">
-                                                                    <a href="#" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
-                                                                        <img class="vc_single_image-img" src="{{ asset('site/images/1903/ban3.jpg') }}" width="193" height="125" alt="banner2" title="banner2" />
-                                                                    </a>
-                                                                </figure>
-                                                            </div>
+                                                            @endforeach
                                                         </div>
                                                     </div>
                                                 </div>
@@ -394,7 +369,7 @@
                                                             <div class="item item-1 col-lg-3 col-md-3 col-sm-6">
                                                                 <a href="#" class="wrap">
                                                                     <div class="icon">
-                                                                        <i class="fa fa-paper-plane"></i>
+                                                                        <i style="color: #00afff" class="fa fa-paper-plane"></i>
                                                                     </div>
 
                                                                     <div class="content">
@@ -407,7 +382,7 @@
                                                             <div class="item item-2 col-lg-3 col-md-3 col-sm-6">
                                                                 <a href="#" class="wrap">
                                                                     <div class="icon">
-                                                                        <i class="fa fa-map-marker"></i>
+                                                                        <i style="color: #00afff" class="fa fa-map-marker"></i>
                                                                     </div>
 
                                                                     <div class="content">
@@ -420,7 +395,7 @@
                                                             <div class="item item-3 col-lg-3 col-md-3 col-sm-6">
                                                                 <a href="#" class="wrap">
                                                                     <div class="icon">
-                                                                        <i class="fa fa-tag"></i>
+                                                                        <i style="color: #00afff" class="fa fa-tag"></i>
                                                                     </div>
 
                                                                     <div class="content">
@@ -433,7 +408,7 @@
                                                             <div class="item item-4 col-lg-3 col-md-3 col-sm-6">
                                                                 <a href="#" class="wrap">
                                                                     <div class="icon">
-                                                                        <i class="fa fa-life-ring"></i>
+                                                                        <i style="color: #00afff" class="fa fa-life-ring"></i>
                                                                     </div>
 
                                                                     <div class="content">

@@ -9,7 +9,7 @@
                 <h6><span>Modele</span> :{{$detail_sol->model }}</h6>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="{{ URL::to($detail_sol['image'] )}}" style="height: 300px; width: 350px">
+                        <img src="{{ URL::to($detail_sol['image'] )}}" style="height: 300px; width: 300px">
                         <h6 style=" padding-top: 20px; color: rgba(255,227,0,0.99)"><span style="color: #323232 ! important;">Message:</span><br/>
                             <i class="fas fa-exclamation-circle"></i> Ce produit ne dispose que d'une seul image  </h6>
                     </div>

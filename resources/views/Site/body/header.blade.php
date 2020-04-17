@@ -48,31 +48,13 @@
                                     <div class="reveal-2 topsearch-entry" >
                                         <form action="{{ route('search') }}" method="post">
                                             @csrf
-                                            <input style="background-color: white; border-color: orange" type="text" value="" name="search" placeholder="Recherche...">
-
-                                            <div style="background-color: white; border-color: orange" class="cat-wrapper">
-                                                <label style="background-color: white" class="label-search">
-                                                    <select style="background-color: white" name="search_category" class="s1_option">
-                                                        <option value="">Choisir</option>
-                                                        <option value="3">Sol</option>
-                                                        <option value="7">Faiences</option>
-                                                        <option value="8">Façades</option>
-                                                        <option value="14">Lavabo</option>
-                                                        <option value="12">Sanitaire</option>
-
-
-                                                    </select>
-                                                </label>
-                                            </div>
-
+                                            <input style="background-color: white; border-color: orange" type="text"  required value="" name="search" placeholder="Recherche...">
 
                                             <button type="submit" title="Search" class="fa fa-search button-search-pro"></button><br>
                                             @if($errors->has('search'))
                                             <small style="padding-top: 15px !important; color: white" id="emailHelp" class="form-text">{{$errors->first('search')}}</small>
                                             @endif
-                                            @if($errors->has('search_category'))
-                                            <small style="padding-top: 15px !important; color: white; padding-left: 40%" id="emailHelp" class="form-text">{{$errors->first('search_category')}}</small>
-                                            @endif
+
                                         </form>
 
                                     </div>

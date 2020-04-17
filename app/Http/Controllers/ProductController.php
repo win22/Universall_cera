@@ -14,20 +14,18 @@ class ProductController extends Controller
     {
         request()->validate([
             'search' => ['required', 'max:50'],
-            'search_category' => ['required', 'max:3'],
         ]);
         $search = request()->search;
         $cat =  request()->search_category;
         $result =  Produit::where('status', 1)
                 ->where('model', 'like', '%' .$search. '%')
-                ->where('categorie_id', $cat)
-                ->orWhere('parent_id', $cat)
                 ->latest()
-                ->paginate(8);
+                ->paginate(16);
 
         $nb_count = $result->count();
-        $sol_footer = Produit::where('categorie_id', 3)
+        $sol_footer = Produit::where('parent_id', 14)
             ->where('status', 1)
+            ->inRandomOrder()
             ->take(4)
             ->get();
 
@@ -42,10 +40,12 @@ class ProductController extends Controller
             ->where('status', 1)
             ->first();
         $all_product = Produit::take(8)
+            ->inRandomOrder()
             ->get();
-        $sol_footer = Produit::where('categorie_id', 3)
+        $sol_footer = Produit::where('parent_id', 14)
             ->where('status', 1)
-            ->take(4)
+            ->inRandomOrder()
+            ->take(5)
             ->get();
         return view('Site.pages.details',
             [
@@ -68,14 +68,15 @@ class ProductController extends Controller
             ->where('categorie_id', $id)
             ->orWhere('parent_id', $id)
             ->inRandomOrder()
-            ->paginate(8);
+            ->paginate(16);
 
         $category =  Categorie::where('id' , $id)
             ->orWhere('parent_id', $id)
             ->first();
         $nb_count = $product_category->count();
-        $sol_footer = Produit::where('categorie_id', 3)
+        $sol_footer = Produit::where('categorie_id', 12)
             ->where('status', 1)
+            ->inRandomOrder()
             ->take(4)
             ->get();
         return view('Site.pages.category_product',

@@ -64,7 +64,7 @@
 
                                                     <!-- add to cart, wishlist, compare -->
                                                     <div class="item-bottom clearfix">
-                                                        <a style="background-color: #ffaa00; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $all->id ) }}">Voir les détails</a>
+                                                        <a style="background-color: tomato; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $all->id ) }}">Voir les détails</a>
                                                         <div class="clear"></div>
                                                     </div>
                                                 </div>
@@ -112,7 +112,7 @@
                     <div class="widget-1 widget-first widget woocommerce_product_categories-3 woocommerce widget_product_categories">
                         <div class="widget-inner">
                             <div class="block-title-widget">
-                                <h2><span>Categories</span></h2>
+                                <h2 style="background-color: #00afff; color: white"><span>Categories</span></h2>
                             </div>
 
                             <ul class="product-categories">
@@ -132,7 +132,7 @@
                     <div class="widget-5 widget etrostore_best_seller_product-3 etrostore_best_seller_product">
                         <div class="widget-inner">
                             <div class="block-title-widget">
-                                <h2><span>Les plus demandé</span></h2>
+                                <h2 style="background-color: #00afff; color: white"><span>Les plus demandé</span></h2>
                             </div>
 
                             <div id="best-seller-01" class="sw-best-seller-product">

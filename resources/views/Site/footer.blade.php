@@ -10,8 +10,8 @@
                 <div class="container float vc_column_container vc_col-sm-12">
                     <div class="vc_column-inner ">
                         <div class="wpb_wrapper">
-                            <div  class="vc_row vc_inner vc_row-fluid footer-top">
-                                <div  class="vc_column_container vc_col-sm-8">
+                            <div style="background-color: #00afff; color: white"  class="vc_row vc_inner vc_row-fluid footer-top">
+                                <div   class="vc_column_container vc_col-sm-8">
                                     <div class="vc_column-inner ">
                                         <div class="wpb_wrapper">
                                             <div class="wpb_text_column wpb_content_element ">
@@ -73,7 +73,7 @@
                                             <div class="wpb_text_column wpb_content_element ">
                                                 <div class="wpb_wrapper">
                                                     <div class="ya-logo">
-                                                        <a href="home_page_1.html">
+                                                        <a href="/">
                                                             <img style="width: 100px" src="{{asset('site/images/icons/logoucs.jpg') }}" alt="logo" />
                                                         </a>
                                                     </div>

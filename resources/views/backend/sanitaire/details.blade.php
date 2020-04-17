@@ -9,7 +9,7 @@
                 <h6><span>Modele</span> :{{$detail_sanitaire->model }}</h6>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="{{ URL::to($detail_sanitaire['image'] )}}" style="height: 300px; width: 350px">
+                        <img src="{{ URL::to($detail_sanitaire['image'] )}}" style="height: 300px; width: 300px">
                     </div>
                     <div class="col-md-8">
                         <div class="row">

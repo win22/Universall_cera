@@ -23,68 +23,8 @@
 
         <div class="container">
             <div class="row">
-                <aside id="left" class="sidebar col-lg-3 col-md-4 col-sm-4 reveal-2">
-                    <div class="widget-1 widget-first widget woocommerce_product_categories-3 woocommerce widget_product_categories">
-                        <div  class="widget-inner">
-                            <div   class="block-title-widget">
-                                <h2><span>Categories</span></h2>
-                            </div>
 
-                            <ul class="product-categories">
-                                <li class="cat-item"><a href="{{ route('category', 3) }}">Sol
-
-                                    </a>   <span class="menu-color" data-color="#7ac143"></span> </li>
-                                <li class="cat-item"><a href="{{ route('category', 7) }}">Faiences</a> </li>
-                                <li class="cat-item"><a href="{{ route('category', 10) }}">Salle de bain</a> </li>
-                                <li class="cat-item"><a href="{{ route('category', 12) }}">Sanitaire</a> </li>
-                                <li class="cat-item"><a href="{{ route('category', 14) }}">Lavabo</a> </li>
-                                <li class="cat-item"><a href="{{ route('category', 11) }}">Décoration</a> </li>
-                                <li class="cat-item"><a href="{{ route('category', 9) }}">Faiences cuisines</a> </li>
-                                <li class="cat-item"><a href="{{ route('category', 10) }}">Faiences Salle de bain</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="widget-5 widget etrostore_best_seller_product-3 etrostore_best_seller_product">
-                        <div class="widget-inner">
-                            <div class="block-title-widget">
-                                <h2><span>Les plus demandé</span></h2>
-                            </div>
-
-                            <div id="best-seller-01" class="sw-best-seller-product">
-                                <ul class="list-unstyled">
-                                    @foreach($sol_footer as $solc)
-                                    <li class="clearfix">
-                                        <div class="item-img">
-                                            <a href="{{ route('details', $solc->id) }}" title="corned beef enim">
-                                                <img style="width: 60px; height: 70px"	width="180" height="180" src="{{ URL::to(asset($solc->image)) }}" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt=""
-                                                     srcset="{{ URL::to(asset($solc->image)) }} 180w, {{ URL::to(asset($solc->image)) }} 150w, {{ URL::to(asset($solc->image)) }} 300w, {{ URL::to(asset($solc->image)) }} 600w"
-                                                     sizes="(max-width: 180px) 50vw, 180px" />
-                                            </a>
-                                        </div>
-
-                                        <div class="item-content">
-                                            <div class="reviews-content">
-
-                                                <div class="item-number-rating">
-                                                    Produit de type cermaique
-                                                </div>
-                                            </div>
-
-                                            <h4><a style="color: #08beff !important;" href="{{ route('details', $solc->id) }}" title="corned beef enim">{{ $solc->model }}</a></h4>
-
-                                            <div style="color: tomato" class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{{ $solc->prix }} FCFA</span></div>
-                                        </div>
-                                    </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </aside>
-                <div id="contents" class="content col-lg-9 col-md-8 col-sm-8 reveal-3" role="main">
+                <div id="contents" class="content col-lg-9 col-md-8 col-sm-8 reveal-3 pull-right" role="main">
                     <div id="contents-detail" class="content col-lg-12 col-md-12 col-sm-12" role="main">
                         <div id="container">
                             <div id="content" role="main">
@@ -337,7 +277,67 @@
                         </div>
                     </div>
                 </div>
+                <aside id="left" class="sidebar col-lg-3 col-md-4 col-sm-4 reveal-2">
+                    <div class="widget-1 widget-first widget woocommerce_product_categories-3 woocommerce widget_product_categories">
+                        <div  class="widget-inner">
+                            <div   class="block-title-widget">
+                                <h2 style="background-color: #00afff; color: white"><span>Categories</span></h2>
+                            </div>
 
+                            <ul class="product-categories">
+                                <li class="cat-item"><a href="{{ route('category', 3) }}">Sol
+
+                                    </a>   <span class="menu-color" data-color="#7ac143"></span> </li>
+                                <li class="cat-item"><a href="{{ route('category', 7) }}">Faiences</a> </li>
+                                <li class="cat-item"><a href="{{ route('category', 10) }}">Salle de bain</a> </li>
+                                <li class="cat-item"><a href="{{ route('category', 12) }}">Sanitaire</a> </li>
+                                <li class="cat-item"><a href="{{ route('category', 14) }}">Lavabo</a> </li>
+                                <li class="cat-item"><a href="{{ route('category', 11) }}">Décoration</a> </li>
+                                <li class="cat-item"><a href="{{ route('category', 9) }}">Faiences cuisines</a> </li>
+                                <li class="cat-item"><a href="{{ route('category', 10) }}">Faiences Salle de bain</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="widget-5 widget etrostore_best_seller_product-3 etrostore_best_seller_product">
+                        <div class="widget-inner">
+                            <div class="block-title-widget">
+                                <h2 style="background-color: #00afff; color: white"><span>Les plus demandé</span></h2>
+                            </div>
+
+                            <div id="best-seller-01" class="sw-best-seller-product">
+                                <ul class="list-unstyled">
+                                    @foreach($sol_footer as $solc)
+                                    <li class="clearfix">
+                                        <div class="item-img">
+                                            <a href="{{ route('details', $solc->id) }}" title="corned beef enim">
+                                                <img style="width: 60px; height: 70px"	width="180" height="180" src="{{ URL::to(asset($solc->image)) }}" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt=""
+                                                     srcset="{{ URL::to(asset($solc->image)) }} 180w, {{ URL::to(asset($solc->image)) }} 150w, {{ URL::to(asset($solc->image)) }} 300w, {{ URL::to(asset($solc->image)) }} 600w"
+                                                     sizes="(max-width: 180px) 50vw, 180px" />
+                                            </a>
+                                        </div>
+
+                                        <div class="item-content">
+                                            <div class="reviews-content">
+
+                                                <div class="item-number-rating">
+                                                    Produit de type cermaique
+                                                </div>
+                                            </div>
+
+                                            <h4><a style="color: #08beff !important;" href="{{ route('details', $solc->id) }}" title="corned beef enim">{{ $solc->model }}</a></h4>
+
+                                            <div style="color: tomato" class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{{ $solc->prix }} FCFA</span></div>
+                                        </div>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </aside>
             </div>
         </div>
     </div>

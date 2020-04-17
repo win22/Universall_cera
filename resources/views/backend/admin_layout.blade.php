@@ -96,6 +96,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item ">
+                        <a href="/dashboard" class="nav-link {{ request()->is('')? 'active' : ''  }}" >
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>
+                                Commandes
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/dashboard" class="nav-link {{ request()->is('')? 'active' : ''  }}" >
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>
+                                Message
+                            </p>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a href="{{ route('sol') }}" class="nav-link {{ request()->is('all_sol', 'detail_sol')? 'active' : '' }}">
                             <i class=" {{ request()->is('all_sol')? 'nav-icon fas fa-circle' : 'far fa-circle nav-icon' }} "></i>

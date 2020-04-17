@@ -10,12 +10,14 @@ class ShopController extends Controller
     public function shop()
    {
         $produit_all = Produit::where('status', 1)
+            ->inRandomOrder()
             ->latest()
-            ->paginate(12);
+            ->paginate(16);
         $count = $produit_all->count();
 
-       $sol_footer = Produit::where('categorie_id', 3)
+       $sol_footer = Produit::where('categorie_id', 12)
            ->where('status', 1)
+           ->inRandomOrder()
            ->take(4)
            ->get();
 

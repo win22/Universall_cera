@@ -28,8 +28,69 @@
                                         <div class="wpb_wrapper">
                                             <div id="_sw_countdown_01" class="sw-woo-container-slider responsive-slider countdown-slider countdown-slider2" data-lg="5" data-md="4" data-sm="2" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false" data-circle="false">
                                                 <div class="resp-slider-container">
+                                                    <div class="box-title clearfix">
+                                                        <h3 style="background-color: #00afff;">Lavabos de luxe</h3>
+                                                        <a href="#">voir tout</a>
+                                                    </div>
+
+                                                    <div class="slider responsive">
+                                                        @foreach($lavabo_tendance as $lav_tend)
+                                                        <div class="item-countdown product" >
+                                                            <div class="item-wrap">
+                                                                <div class="item-detail">
+                                                                    <div class="item-content">
+                                                                        <div class="item-image-countdown">
+                                                                            <span class="onsale">Sale!</span>
+
+                                                                            <a href={{ route('details', $lav_tend->id ) }}">
+                                                                            <div class="product-thumb-hover">
+                                                                                <img  style="width: 160px !important; height: 150px ! important"	width="300" height="100" src="{{ URL::to(asset($lav_tend->image)) }}" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""
+                                                                                      srcset="{{ URL::to(asset($lav_tend->image)) }} 100w, {{ URL::to(asset($lav_tend->image)) }} 150w, {{ URL::to(asset($lav_tend->image)) }} 180w,{{ URL::to(asset($lav_tend->image)) }} 600w"
+                                                                                      sizes="(max-width: 300px) 100vw, 300px" />
+                                                                            </div>
+                                                                            </a>
+
+                                                                            <!-- add to cart, wishlist, compare -->
+                                                                            <div class="item-bottom clearfix">
+                                                                                <a style="background-color: tomato; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $lav_tend->id ) }}">Voir les détails</a>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="product-countdown" data-date="1519776000" data-price="$250" data-starttime="1483747200" data-cdtime="1519776000" data-id="product_sw_countdown_02"></div>
+
+                                                                        <!-- Price -->
+                                                                        <div style="padding-top: 10px!important;" class="item-price">
+                                                                            <small style="padding-top: 5px!important;" >Produit de type céramique</small><br>
+                                                                            <ins  style="color: tomato ! important; padding-top: 5px!important;">
+                                                                                {{ $lav_tend->prix }} FCFA
+                                                                            </ins><br>
+                                                                            <ins>
+                                                                                <a style="color: #0b85ea" href="{{ route('details', $lav_tend->id ) }}" title="veniam dolore">{{ $lav_tend->model }} </a>
+                                                                            </ins>
+                                                                        </div>
+                                                                        <div class="sale-off">new</div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        @endforeach
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="vc_row vc_row-fluid margin-bottom-30 reveal-3">
+                                <div class="vc_column_container vc_col-sm-12">
+                                    <div class="vc_column-inner ">
+                                        <div class="wpb_wrapper">
+                                            <div id="_sw_countdown_01" class="sw-woo-container-slider responsive-slider countdown-slider countdown-slider2" data-lg="5" data-md="4" data-sm="2" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false" data-circle="false">
+                                                <div class="resp-slider-container">
                                                     <div  class="box-title clearfix">
-                                                        <h3 style="background-color: #00afff;">Meilleurs Produits</h3>
+                                                        <h3 style="background-color: #00afff;">Meilleurs produits Sol</h3>
                                                         <a href="{{ route('shop') }}">voir tout</a>
                                                     </div>
 
@@ -74,67 +135,6 @@
                                                                     </div>
 
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="vc_row vc_row-fluid margin-bottom-30 reveal-3">
-                                <div class="vc_column_container vc_col-sm-12">
-                                    <div class="vc_column-inner ">
-                                        <div class="wpb_wrapper">
-                                            <div id="_sw_countdown_01" class="sw-woo-container-slider responsive-slider countdown-slider countdown-slider2" data-lg="5" data-md="4" data-sm="2" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false" data-circle="false">
-                                                <div class="resp-slider-container">
-                                                    <div class="box-title clearfix">
-                                                        <h3 style="background-color: #00afff;">Salle de bains</h3>
-                                                        <a href="#">voir tout</a>
-                                                    </div>
-
-                                                    <div class="slider responsive">
-                                                        @foreach($lavabo_tendance as $lav_tend)
-                                                        <div class="item-countdown product" >
-                                                            <div class="item-wrap">
-                                                                <div class="item-detail">
-                                                                    <div class="item-content">
-                                                                        <div class="item-image-countdown">
-                                                                            <span class="onsale">Sale!</span>
-
-                                                                            <a href={{ route('details', $lav_tend->id ) }}">
-                                                                                <div class="product-thumb-hover">
-                                                                                    <img  style="width: 160px !important; height: 150px ! important"	width="300" height="100" src="{{ URL::to(asset($lav_tend->image)) }}" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""
-                                                                                          srcset="{{ URL::to(asset($lav_tend->image)) }} 100w, {{ URL::to(asset($lav_tend->image)) }} 150w, {{ URL::to(asset($lav_tend->image)) }} 180w,{{ URL::to(asset($lav_tend->image)) }} 600w"
-                                                                                          sizes="(max-width: 300px) 100vw, 300px" />
-                                                                                </div>
-                                                                            </a>
-
-                                                                            <!-- add to cart, wishlist, compare -->
-                                                                            <div class="item-bottom clearfix">
-                                                                                <a style="background-color: tomato; color:white; padding-right: 10px" class="btn btn-sm" href="{{ route('details', $lav_tend->id ) }}">Voir les détails</a>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="product-countdown" data-date="1519776000" data-price="$250" data-starttime="1483747200" data-cdtime="1519776000" data-id="product_sw_countdown_02"></div>
-
-                                                                        <!-- Price -->
-                                                                        <div style="padding-top: 10px!important;" class="item-price">
-                                                                            <small style="padding-top: 5px!important;" >Produit de type céramique</small><br>
-                                                                            <ins  style="color: tomato ! important; padding-top: 5px!important;">
-                                                                                {{ $lav_tend->prix }} FCFA
-                                                                            </ins><br>
-                                                                            <ins>
-                                                                                <a style="color: #0b85ea" href="{{ route('details', $lav_tend->id ) }}" title="veniam dolore">{{ $lav_tend->model }} </a>
-                                                                            </ins>
-                                                                        </div>
-                                                                        <div class="sale-off">new</div>
-                                                                    </div>
-
-                                                           </div>
                                                             </div>
                                                         </div>
                                                         @endforeach
@@ -253,7 +253,7 @@
                                         <div class="wpb_wrapper">
                                             <div id="sw_recommend_product-01" class="sw-recommend-product vc_element sw-accordion-product">
                                                 <div class="box-slider-title">
-                                                    <h2>Sanitaire</h2>
+                                                    <h2 style="background-color: #00afff; color: white">Sanitaire</h2>
                                                 </div>
 
                                                 <div class="wrap-content">
@@ -303,7 +303,7 @@
                                         <div class="wpb_wrapper">
                                             <div id="sw_recommend_product-01" class="sw-recommend-product vc_element sw-accordion-product">
                                                 <div class="box-slider-title">
-                                                    <h2>Sol</h2>
+                                                    <h2 style="background-color: #00afff; color: white">Sol</h2>
                                                 </div>
 
                                                 <div class="wrap-content">
@@ -353,7 +353,7 @@
                                         <div class="wpb_wrapper">
                                             <div id="sw_recommend_product-01" class="sw-recommend-product vc_element sw-accordion-product">
                                                 <div class="box-slider-title">
-                                                    <h2>Lavabo</h2>
+                                                    <h2 style="background-color: #00afff; color: white">Lavabo</h2>
                                                 </div>
 
                                                 <div class="wrap-content">
@@ -401,9 +401,9 @@
                                 <div class="vc_column_container vc_col-sm-12 vc_col-lg-3 vc_col-md-6 vc_col-xs-12">
                                     <div class="vc_column-inner">
                                         <div class="wpb_wrapper">
-                                            <div id="sw_recommend_product-01" class="sw-recommend-product vc_element sw-accordion-product">
+                                            <div  id="sw_recommend_product-01" class="sw-recommend-product vc_element sw-accordion-product">
                                                 <div class="box-slider-title">
-                                                    <h2>Faiences</h2>
+                                                    <h2 style="background-color: #00afff; color: white">Faiences</h2>
                                                 </div>
 
                                                 <div class="wrap-content">
@@ -465,8 +465,8 @@
                                                                         </div>
 
                                                                         <div class="content">
-                                                                            <h3>Money Back Guarantee</h3>
-                                                                            <p>30 Days Money Back</p>
+                                                                            <h3>Garentie de remboursement</h3>
+
                                                                         </div>
                                                                     </div>
                                                                 </a>
@@ -480,8 +480,8 @@
                                                                         </div>
 
                                                                         <div class="content">
-                                                                            <h3>Free Worldwide Shipping</h3>
-                                                                            <p>On Order Over $100</p>
+                                                                            <h3>Livraison Gratuite à travers le Sénégal</h3>
+
                                                                         </div>
                                                                     </div>
                                                                 </a>
@@ -495,8 +495,7 @@
                                                                         </div>
 
                                                                         <div class="content">
-                                                                            <h3>Member Discount</h3>
-                                                                            <p>Upto 70 % Discount</p>
+                                                                            <h3>Remise aux Clients fidèles</h3>
                                                                         </div>
                                                                     </div>
                                                                 </a>
@@ -510,8 +509,8 @@
                                                                         </div>
 
                                                                         <div class="content">
-                                                                            <h3>24/7 Online Support</h3>
-                                                                            <p>Technical Support 24/7</p>
+                                                                            <h3>Notre boutique ouverte 7/7</h3>
+
                                                                         </div>
                                                                     </div>
                                                                 </a>
